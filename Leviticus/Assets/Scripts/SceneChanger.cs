@@ -23,4 +23,13 @@ public class SceneChanger : MonoBehaviour
         SceneManager.LoadScene("Game Scene");
         Debug.Log("Scene Loading: Game Scene");
     }
+
+    public void ExitGame()
+    {
+        #if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+        #endif
+        Application.Quit();
+        Debug.Log("Exiting Game");
+    }
 }
