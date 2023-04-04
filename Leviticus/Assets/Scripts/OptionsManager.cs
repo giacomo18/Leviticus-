@@ -18,10 +18,20 @@ public class OptionsManager : MonoBehaviour
     public Button hudTypeButton2;
     public Button hudTypeButton3;
 
-    public Image uiHudImage;
-    public Sprite uiType1;
-    public Sprite uiType2;
-    public Sprite uiType3;
+    public Button hudScaleButton1;
+    public Button hudScaleButton2;
+    public Button hudScaleButton3;
+
+    Image uiHudImage;
+    public Sprite hud1a;
+    public Sprite hud1b;
+    public Sprite hud1c;
+    public Sprite hud2a;
+    public Sprite hud2b;
+    public Sprite hud2c;
+    public Sprite hud3a;
+    public Sprite hud3b;
+    public Sprite hud3c;
 
     [SerializeField] PlayerPreferences playerPrefs;
 
@@ -44,6 +54,19 @@ public class OptionsManager : MonoBehaviour
         else
         {
             UIType1();
+        }
+
+        if (playerPrefs.hudScalePref == 3)
+        {
+            UIScale3();
+        }
+        else if (playerPrefs.hudScalePref == 2)
+        {
+            UIScale2();
+        }
+        else
+        {
+            UIScale1();
         }
     }
 
@@ -79,28 +102,122 @@ public class OptionsManager : MonoBehaviour
 
     public void UIType1()
     {
-        uiHudImage.sprite = uiType1;
         hudTypeButton1.interactable = false;
         hudTypeButton2.interactable = true;
         hudTypeButton3.interactable = true;
-        playerPrefs.SaveData(1);
+        playerPrefs.SaveType(1);
+        if(playerPrefs.hudScalePref == 3)
+        {
+            uiHudImage.sprite = hud1c;
+        }
+        else if (playerPrefs.hudScalePref == 2)
+        {
+            uiHudImage.sprite = hud1b;
+        }
+        else
+        {
+            uiHudImage.sprite = hud1a;
+        }
     }
 
     public void UIType2()
     {
-        uiHudImage.sprite = uiType2;
+        uiHudImage.sprite = hud1b;
         hudTypeButton1.interactable = true;
         hudTypeButton2.interactable = false;
         hudTypeButton3.interactable = true;
-        playerPrefs.SaveData(2);
+        playerPrefs.SaveType(2);
+        if (playerPrefs.hudScalePref == 3)
+        {
+            uiHudImage.sprite = hud2c;
+        }
+        else if (playerPrefs.hudScalePref == 2)
+        {
+            uiHudImage.sprite = hud2b;
+        }
+        else
+        {
+            uiHudImage.sprite = hud2a;
+        }
     }
 
     public void UIType3()
     {
-        uiHudImage.sprite = uiType3;
+        uiHudImage.sprite = hud1c;
         hudTypeButton1.interactable = true;
         hudTypeButton2.interactable = true;
         hudTypeButton3.interactable = false;
-        playerPrefs.SaveData(3);
+        playerPrefs.SaveType(3);
+        if (playerPrefs.hudScalePref == 3)
+        {
+            uiHudImage.sprite = hud3c;
+        }
+        else if (playerPrefs.hudScalePref == 2)
+        {
+            uiHudImage.sprite = hud3b;
+        }
+        else
+        {
+            uiHudImage.sprite = hud3a;
+        }
     }
+
+    public void UIScale1()
+    {
+        hudScaleButton1.interactable = false;
+        hudScaleButton2.interactable = true;
+        hudScaleButton3.interactable = true;
+        playerPrefs.SaveScale(1);
+        if (playerPrefs.hudTypePref == 3)
+        {
+            uiHudImage.sprite = hud3a;
+        }
+        else if (playerPrefs.hudTypePref == 2)
+        {
+            uiHudImage.sprite = hud2a;
+        }
+        else
+        {
+            uiHudImage.sprite = hud1a;
+        }
+    }
+    public void UIScale2()
+    {
+        hudScaleButton1.interactable = true;
+        hudScaleButton2.interactable = false;
+        hudScaleButton3.interactable = true;
+        playerPrefs.SaveScale(2);
+        if (playerPrefs.hudTypePref == 3)
+        {
+            uiHudImage.sprite = hud3b;
+        }
+        else if (playerPrefs.hudTypePref == 2)
+        {
+            uiHudImage.sprite = hud2b;
+        }
+        else
+        {
+            uiHudImage.sprite = hud1b;
+        }
+    }
+    public void UIScale3()
+    {
+        hudScaleButton1.interactable = true;
+        hudScaleButton2.interactable = true;
+        hudScaleButton3.interactable = false;
+        playerPrefs.SaveScale(3);
+        if (playerPrefs.hudTypePref == 3)
+        {
+            uiHudImage.sprite = hud3c;
+        }
+        else if (playerPrefs.hudTypePref == 2)
+        {
+            uiHudImage.sprite = hud2c;
+        }
+        else
+        {
+            uiHudImage.sprite = hud1c;
+        }
+    }
+
 }

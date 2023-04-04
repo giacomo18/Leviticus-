@@ -1661,10 +1661,18 @@ MonoBehaviour:
   hudTypeButton1: {fileID: 827756437}
   hudTypeButton2: {fileID: 1353418169}
   hudTypeButton3: {fileID: 1700184192}
-  uiHudImage: {fileID: 1032833185}
-  uiType1: {fileID: 21300000, guid: d081a85a2a42a6b49914745c076ae1ee, type: 3}
-  uiType2: {fileID: 21300000, guid: a78ec9dff93ca1046ad638b8121d9366, type: 3}
-  uiType3: {fileID: 21300000, guid: 83451bacf7d853f40be0f373aa493a41, type: 3}
+  hudScaleButton1: {fileID: 2077548784}
+  hudScaleButton2: {fileID: 668577236}
+  hudScaleButton3: {fileID: 1259404328}
+  hud1a: {fileID: 21300000, guid: 625ecec3733ea2c4391dd0256833cc95, type: 3}
+  hud1b: {fileID: 21300000, guid: 284499f3456162640ac17007e81eb1a1, type: 3}
+  hud1c: {fileID: 21300000, guid: 8743ef20d4e2dc0419635064703e6824, type: 3}
+  hud2a: {fileID: 21300000, guid: 2b85d25aa2e507c408a55afe1ca3e778, type: 3}
+  hud2b: {fileID: 21300000, guid: 3096245b01a353c40af43a06a23e3863, type: 3}
+  hud2c: {fileID: 21300000, guid: 9bf609459be4cd84facc32b8e02c39a1, type: 3}
+  hud3a: {fileID: 21300000, guid: 3ccdc206936f1cb45b931f910f828949, type: 3}
+  hud3b: {fileID: 21300000, guid: f67cd670a9756624984791f83cd14560, type: 3}
+  hud3c: {fileID: 21300000, guid: 84d38e0f554f964419120527d8b6439c, type: 3}
   playerPrefs: {fileID: 0}
 --- !u!1 &527077910
 GameObject:
@@ -2070,7 +2078,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 668577237}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 477679664}
+        m_TargetAssemblyTypeName: OptionsManager, Assembly-CSharp
+        m_MethodName: UIScale2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &668577237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4384,7 +4404,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1259404329}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 477679664}
+        m_TargetAssemblyTypeName: OptionsManager, Assembly-CSharp
+        m_MethodName: UIScale3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1259404329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7441,7 +7473,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2077548785}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 477679664}
+        m_TargetAssemblyTypeName: OptionsManager, Assembly-CSharp
+        m_MethodName: UIScale1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2077548785
 MonoBehaviour:
   m_ObjectHideFlags: 0
