@@ -12,6 +12,7 @@ public class Sound : MonoBehaviour
     GameObject sfxCtrl;
     AudioSource musicSource;
     AudioSource sfxSource;
+    PlayerPreferences prefs;
 
     private void Awake()
     {
@@ -19,6 +20,7 @@ public class Sound : MonoBehaviour
         musicSource = pData.GetComponent<AudioSource>();
         sfxCtrl = GameObject.Find("SFXController");
         sfxSource = sfxCtrl.GetComponent<AudioSource>();
+        prefs = pData.GetComponent<PlayerPreferences>();
     }
 
     void Start()
@@ -26,11 +28,21 @@ public class Sound : MonoBehaviour
         Load();
     }
 
-    public void ChangeVolume()
+    //private void Update()
+    //{
+    //  Save();
+    //}
+
+    public void ChangeMusicVolume()
     {
         musicSource.volume = musicSlider.value;
+        SaveMusic();
+    }
+
+    public void ChangeSFXVolume()
+    {
         sfxSource.volume = sfxSlider.value;
-        Save();
+        SaveSFX();
     }
 
     private void Load()
@@ -39,9 +51,14 @@ public class Sound : MonoBehaviour
         sfxSlider.value = PlayerPrefs.GetFloat("sfxVolume");
     }
 
-    private void Save()
+    private void SaveMusic()
     {
         PlayerPrefs.SetFloat("musicVolume", musicSlider.value);
+        prefs.musicSource.volume = PlayerPrefs.GetFloat("musicVolume");
+    }
+    private void SaveSFX()
+    {
         PlayerPrefs.SetFloat("sfxVolume", sfxSlider.value);
+        prefs.sfxSource.volume = PlayerPrefs.GetFloat("sfxVolume");
     }
 }
