@@ -6,15 +6,19 @@ using UnityEngine;
 
 public class Sound : MonoBehaviour
 {
-
     [SerializeField] Slider musicSlider;
-    [SerializeField] GameObject prefs;
-    [SerializeField] AudioSource musicSource;
+    [SerializeField] Slider sfxSlider;
+    GameObject pData;
+    GameObject sfxCtrl;
+    AudioSource musicSource;
+    AudioSource sfxSource;
 
     private void Awake()
     {
-        prefs = GameObject.Find("PlayerData");
-        musicSource = prefs.GetComponent<AudioSource>();
+        pData = GameObject.Find("PlayerData");
+        musicSource = pData.GetComponent<AudioSource>();
+        sfxCtrl = GameObject.Find("SFXController");
+        sfxSource = sfxCtrl.GetComponent<AudioSource>();
     }
 
     void Start()
@@ -25,16 +29,19 @@ public class Sound : MonoBehaviour
     public void ChangeVolume()
     {
         musicSource.volume = musicSlider.value;
+        sfxSource.volume = sfxSlider.value;
         Save();
     }
 
     private void Load()
     {
         musicSlider.value = PlayerPrefs.GetFloat("musicVolume");
+        sfxSlider.value = PlayerPrefs.GetFloat("sfxVolume");
     }
 
     private void Save()
     {
         PlayerPrefs.SetFloat("musicVolume", musicSlider.value);
+        PlayerPrefs.SetFloat("sfxVolume", sfxSlider.value);
     }
 }
