@@ -1075,7 +1075,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      HeroIdle3: -6089189685315772502
+      HeroRun7: 4360131077223874234
       HeroDeath4: -6060876265418842428
       HeroPunch3: -1149029613571509917
       HeroSitDownByTheFire1: -2424968931422420723
@@ -1112,7 +1112,7 @@ TextureImporter:
       HeroWalkAwayFromFire3: 7797690872389585371
       HeroOpenedBag: 1154780279644653340
       HeroFlyDown: -7849989574039795051
-      HeroRun7: 4360131077223874234
+      HeroIdle3: -6089189685315772502
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
