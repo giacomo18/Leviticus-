@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class DontDestroy : MonoBehaviour
 {
-    public static DontDestroy musicInstance;
+    public static DontDestroy objInstance;
 
     void Awake()
     {
         DontDestroyOnLoad(this);
 
-        if (musicInstance == null)
+        if (objInstance == null)
         {
-            musicInstance = this;
+            objInstance = this;
         }
         else
         {
