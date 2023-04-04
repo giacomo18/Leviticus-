@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
 
-[RequireComponent(typeof(Image))]
-public class Options : MonoBehaviour
+public class OptionsManager : MonoBehaviour
 {
     public GameObject videoOptions;
     public GameObject audioOptions;
@@ -24,21 +23,12 @@ public class Options : MonoBehaviour
     public Sprite uiType2;
     public Sprite uiType3;
 
-    public int uiTypePref;
-
-    public GameObject playerPrefObj;
-
 
     // Start is called before the first frame update
     void Start()
     {
         OptionsVideo();
-        
-        playerPrefObj = GameObject.Find("PlayerData");
-        PlayerPrefs playerPrefs = playerPrefObj.GetComponent<PlayerPreferences>();
-
-        uiHudImage = hudPanel.GetComponent<Image> ();
-        UIType1();
+        uiHudImage = hudPanel.GetComponent<Image>();
     }
 
     public void OptionsVideo()
@@ -77,8 +67,6 @@ public class Options : MonoBehaviour
         hudTypeButton1.interactable = false;
         hudTypeButton2.interactable = true;
         hudTypeButton3.interactable = true;
-        uiTypePref = 1;
-        playerPrefs.SaveData();
     }
 
     public void UIType2()
@@ -87,8 +75,6 @@ public class Options : MonoBehaviour
         hudTypeButton1.interactable = true;
         hudTypeButton2.interactable = false;
         hudTypeButton3.interactable = true;
-        uiTypePref = 2;
-        playerPrefs.SaveData();
     }
 
     public void UIType3()
@@ -97,7 +83,5 @@ public class Options : MonoBehaviour
         hudTypeButton1.interactable = true;
         hudTypeButton2.interactable = true;
         hudTypeButton3.interactable = false;
-        uiTypePref = 3;
-        playerPrefs.SaveData();
     }
 }

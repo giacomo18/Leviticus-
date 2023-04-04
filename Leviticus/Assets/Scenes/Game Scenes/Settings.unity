@@ -511,8 +511,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 477679659}
-        m_TargetAssemblyTypeName: Options, Assembly-CSharp
+      - m_Target: {fileID: 477679664}
+        m_TargetAssemblyTypeName: OptionsManager, Assembly-CSharp
         m_MethodName: OptionsUI
         m_Mode: 1
         m_Arguments:
@@ -1523,10 +1523,10 @@ GameObject:
   - component: {fileID: 477679663}
   - component: {fileID: 477679657}
   - component: {fileID: 477679656}
-  - component: {fileID: 477679659}
   - component: {fileID: 477679660}
   - component: {fileID: 477679662}
   - component: {fileID: 477679661}
+  - component: {fileID: 477679664}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1569,34 +1569,6 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
---- !u!114 &477679659
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 477679655}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e7bfa99271ffb74a983e116962695c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  videoOptions: {fileID: 123938590}
-  audioOptions: {fileID: 786609795}
-  uiOptions: {fileID: 1688756531}
-  hudPanel: {fileID: 1032833183}
-  videoButton: {fileID: 1646913452}
-  audioButton: {fileID: 1392850144}
-  uiButton: {fileID: 132341746}
-  hudTypeButton1: {fileID: 827756437}
-  hudTypeButton2: {fileID: 1353418169}
-  hudTypeButton3: {fileID: 1700184192}
-  uiHudImage: {fileID: 1032833185}
-  uiType1: {fileID: 21300000, guid: d081a85a2a42a6b49914745c076ae1ee, type: 3}
-  uiType2: {fileID: 21300000, guid: a78ec9dff93ca1046ad638b8121d9366, type: 3}
-  uiType3: {fileID: 21300000, guid: 83451bacf7d853f40be0f373aa493a41, type: 3}
-  uiTypePref: 0
-  playerPrefs: {fileID: 0}
 --- !u!114 &477679660
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1667,6 +1639,33 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &477679664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477679655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85060a2d32c3c5140a20121657533113, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  videoOptions: {fileID: 123938590}
+  audioOptions: {fileID: 786609795}
+  uiOptions: {fileID: 1688756531}
+  hudPanel: {fileID: 1032833183}
+  videoButton: {fileID: 1646913452}
+  audioButton: {fileID: 1392850144}
+  uiButton: {fileID: 132341746}
+  hudTypeButton1: {fileID: 827756437}
+  hudTypeButton2: {fileID: 1353418169}
+  hudTypeButton3: {fileID: 1700184192}
+  uiHudImage: {fileID: 1032833185}
+  uiType1: {fileID: 21300000, guid: d081a85a2a42a6b49914745c076ae1ee, type: 3}
+  uiType2: {fileID: 21300000, guid: a78ec9dff93ca1046ad638b8121d9366, type: 3}
+  uiType3: {fileID: 21300000, guid: 83451bacf7d853f40be0f373aa493a41, type: 3}
+  uiTypePref: 0
 --- !u!1 &527077910
 GameObject:
   m_ObjectHideFlags: 0
@@ -2778,8 +2777,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 477679659}
-        m_TargetAssemblyTypeName: Options, Assembly-CSharp
+      - m_Target: {fileID: 477679664}
+        m_TargetAssemblyTypeName: OptionsManager, Assembly-CSharp
         m_MethodName: UIType1
         m_Mode: 1
         m_Arguments:
@@ -3989,6 +3988,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1071535181}
   m_CullTransparentMesh: 1
+--- !u!1 &1165018907
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1165018908}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1165018908
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1165018907}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 513.9889, y: 289.81705, z: -7.255667}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1167982486
 GameObject:
   m_ObjectHideFlags: 0
@@ -4854,8 +4884,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 477679659}
-        m_TargetAssemblyTypeName: Options, Assembly-CSharp
+      - m_Target: {fileID: 477679664}
+        m_TargetAssemblyTypeName: OptionsManager, Assembly-CSharp
         m_MethodName: UIType2
         m_Mode: 1
         m_Arguments:
@@ -5025,8 +5055,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 477679659}
-        m_TargetAssemblyTypeName: Options, Assembly-CSharp
+      - m_Target: {fileID: 477679664}
+        m_TargetAssemblyTypeName: OptionsManager, Assembly-CSharp
         m_MethodName: OptionsAudio
         m_Mode: 1
         m_Arguments:
@@ -5897,8 +5927,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 477679659}
-        m_TargetAssemblyTypeName: Options, Assembly-CSharp
+      - m_Target: {fileID: 477679664}
+        m_TargetAssemblyTypeName: OptionsManager, Assembly-CSharp
         m_MethodName: OptionsVideo
         m_Mode: 1
         m_Arguments:
@@ -6387,8 +6417,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 477679659}
-        m_TargetAssemblyTypeName: Options, Assembly-CSharp
+      - m_Target: {fileID: 477679664}
+        m_TargetAssemblyTypeName: OptionsManager, Assembly-CSharp
         m_MethodName: UIType3
         m_Mode: 1
         m_Arguments:
