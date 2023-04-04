@@ -23,12 +23,28 @@ public class OptionsManager : MonoBehaviour
     public Sprite uiType2;
     public Sprite uiType3;
 
+    [SerializeField] PlayerPreferences playerPrefs;
+
 
     // Start is called before the first frame update
     void Start()
     {
         OptionsVideo();
         uiHudImage = hudPanel.GetComponent<Image>();
+        playerPrefs = GameObject.Find("PlayerData").GetComponent<PlayerPreferences>();
+
+        if (playerPrefs.hudTypePref == 3)
+        {
+            UIType3();
+        }
+        else if (playerPrefs.hudTypePref == 2)
+        {
+            UIType2();
+        }
+        else
+        {
+            UIType1();
+        }
     }
 
     public void OptionsVideo()
@@ -67,6 +83,7 @@ public class OptionsManager : MonoBehaviour
         hudTypeButton1.interactable = false;
         hudTypeButton2.interactable = true;
         hudTypeButton3.interactable = true;
+        playerPrefs.SaveData(1);
     }
 
     public void UIType2()
@@ -75,6 +92,7 @@ public class OptionsManager : MonoBehaviour
         hudTypeButton1.interactable = true;
         hudTypeButton2.interactable = false;
         hudTypeButton3.interactable = true;
+        playerPrefs.SaveData(2);
     }
 
     public void UIType3()
@@ -83,5 +101,6 @@ public class OptionsManager : MonoBehaviour
         hudTypeButton1.interactable = true;
         hudTypeButton2.interactable = true;
         hudTypeButton3.interactable = false;
+        playerPrefs.SaveData(3);
     }
 }

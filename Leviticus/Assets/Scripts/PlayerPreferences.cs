@@ -4,18 +4,17 @@ using UnityEngine;
 
 public class PlayerPreferences : MonoBehaviour
 {
-    [SerializeField] OptionsManager options;
-    [SerializeField] int hudTypePref;
+    public int hudTypePref;
 
-    // Start is called before the first frame update
     void Start()
     {
-        options = GameObject.Find("EventSystem").GetComponent<OptionsManager>();
+        LoadData();
     }
 
-    public void SaveData()
+    public void SaveData(int hudNum)
     {
-        //PlayerPrefs.SetInt("hudType", options);
+        PlayerPrefs.SetInt("hudType", hudNum);
+        LoadData();
     }
 
     void LoadData()
