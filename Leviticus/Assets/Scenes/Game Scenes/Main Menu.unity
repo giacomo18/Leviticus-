@@ -754,6 +754,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hudTypePref: 0
+  hudScalePref: 0
+  musicVolume: 0
 --- !u!114 &1078914818
 MonoBehaviour:
   m_ObjectHideFlags: 0
