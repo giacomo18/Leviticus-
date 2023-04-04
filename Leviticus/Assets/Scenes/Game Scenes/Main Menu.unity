@@ -756,6 +756,7 @@ MonoBehaviour:
   hudTypePref: 0
   hudScalePref: 0
   musicVolume: 0
+  musicSource: {fileID: 1078914815}
 --- !u!114 &1078914818
 MonoBehaviour:
   m_ObjectHideFlags: 0

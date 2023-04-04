@@ -8,9 +8,11 @@ public class PlayerPreferences : MonoBehaviour
     public int hudScalePref;
     public float musicVolume;
 
+    public AudioSource musicSource;
+
     void Start()
     {
-        AudioListener.volume = PlayerPrefs.GetFloat("musicVolume");
+        musicSource.volume = PlayerPrefs.GetFloat("musicVolume");
         LoadData();
     }
 

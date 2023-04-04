@@ -8,6 +8,14 @@ public class Sound : MonoBehaviour
 {
 
     [SerializeField] Slider musicSlider;
+    [SerializeField] GameObject prefs;
+    [SerializeField] AudioSource musicSource;
+
+    private void Awake()
+    {
+        prefs = GameObject.Find("PlayerData");
+        musicSource = prefs.GetComponent<AudioSource>();
+    }
 
     void Start()
     {
@@ -16,7 +24,7 @@ public class Sound : MonoBehaviour
 
     public void ChangeVolume()
     {
-        AudioListener.volume = musicSlider.value;
+        musicSource.volume = musicSlider.value;
         Save();
     }
 
