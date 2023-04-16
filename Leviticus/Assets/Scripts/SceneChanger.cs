@@ -20,7 +20,7 @@ public class SceneChanger : MonoBehaviour
 
     public void GoGameScene()
     {
-        SceneManager.LoadScene("JaisonUITesting");
+        SceneManager.LoadScene("Game Scene");
         Debug.Log("Scene Loading: Game Scene");
     }
 
