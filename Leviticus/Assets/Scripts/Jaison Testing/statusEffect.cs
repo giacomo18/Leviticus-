@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,9 +12,9 @@ public class statusEffect : MonoBehaviour
     [SerializeField] Button healOverTime;
     [SerializeField] Button powerful;
 
-    [SerializeField] Slider playerHealth;
+    [SerializeField] propertyMeter playerHealth;
     [SerializeField] float playerHealthValue;
-    [SerializeField] float playerMaxHealthValue;
+    [SerializeField] float playerMaxHealthValue = 100;
 
 
     public void Effect(int Effect)
@@ -21,6 +22,7 @@ public class statusEffect : MonoBehaviour
         if(Effect == 1)
         {
             playerHealthValue -= 10;
+            playerHealth.UpdateMeter(playerHealthValue, playerMaxHealthValue);
         }
         if (Effect == 2)
         {
