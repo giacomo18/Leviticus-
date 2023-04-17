@@ -6,11 +6,14 @@ using UnityEngine.UI;
 public class playerManager : MonoBehaviour
 {
     public HealthBarScript playerHealth;
+    [SerializeField] enemyManager enemyManager;
+    [SerializeField] GameManager gameManager;
+
     public float playerHealthValue;
     public float playerMaxHealthValue = 100;
 
-    [SerializeField] enemyManager enemyManager;
-    [SerializeField] GameManager gameManager;
+
+    
     [SerializeField] int playerDamage;
     [SerializeField] Button Action1;
     [SerializeField] Button Action2;
@@ -28,8 +31,8 @@ public class playerManager : MonoBehaviour
     {
        if(Button == 0)
         {
-            //enemyManager.enemyHealth -= playerDamage;
-            //enemyManager.enemyHealthBar(enemyHealth,enemyMaxHealth)
+            enemyManager.enemyHealth -= playerDamage;
+            enemyManager.enemyHealthBar.UpdateMeter(enemyManager.enemyHealth, enemyManager.enemyMaxHealth);
 
         }
        if(Button == 1)

@@ -38,6 +38,7 @@ public class statusEffect : MonoBehaviour
             playerManager.playerHealthValue -= 10;
             playerManager.playerHealth.UpdateMeter(playerManager.playerHealthValue, playerManager.playerMaxHealthValue);
           
+
             iconStuff.effectValue = 1;
  
             iconStuff.Icon();

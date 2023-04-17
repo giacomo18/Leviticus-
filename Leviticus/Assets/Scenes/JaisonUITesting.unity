@@ -142,10 +142,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerManager: {fileID: 1842951258}
   enemyHealthBar: {fileID: 1389176435}
-  enemyHealth: 0
-  enemyMaxHealth: 0
-  enemyMinDamage: 0
-  enemyMaxDamage: 0
+  gameManager: {fileID: 1168267384}
+  enemyHealth: 100
+  enemyMaxHealth: 100
+  enemyMinDamage: 10
+  enemyMaxDamage: 20
 --- !u!1 &22642391
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,6 +1217,17 @@ Transform:
   m_Father: {fileID: 981951016}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &293411824 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5168776384692553193, guid: 8dc6a133a0ebd0f408cfd9f0296a2c91, type: 3}
+  m_PrefabInstance: {fileID: 1100496623}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &346270265
 GameObject:
   m_ObjectHideFlags: 0
@@ -2145,7 +2157,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &610857068
 Transform:
   m_ObjectHideFlags: 0
@@ -2596,6 +2608,17 @@ Transform:
   m_Father: {fileID: 981951016}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!114 &873665286 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 570132417442287708, guid: 8dc6a133a0ebd0f408cfd9f0296a2c91, type: 3}
+  m_PrefabInstance: {fileID: 1100496623}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &897283521
 GameObject:
   m_ObjectHideFlags: 0
@@ -4118,6 +4141,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1139884476}
   m_CullTransparentMesh: 1
+--- !u!1 &1168267382
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1168267383}
+  - component: {fileID: 1168267384}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1168267383
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168267382}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 377.53308, y: 212.95016, z: 2.3010383}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1168267384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168267382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 968fa896105a91740acc21b49b130bc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyManager: {fileID: 6906806}
+  playerManager: {fileID: 1842951258}
 --- !u!1 &1169560924
 GameObject:
   m_ObjectHideFlags: 0
@@ -4595,6 +4664,17 @@ Transform:
   m_Father: {fileID: 981951016}
   m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1278817376 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8175769302455315764, guid: 8dc6a133a0ebd0f408cfd9f0296a2c91, type: 3}
+  m_PrefabInstance: {fileID: 1100496623}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1284924762
 GameObject:
   m_ObjectHideFlags: 0
@@ -6809,10 +6889,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 1103610036}
+  enemyManager: {fileID: 6906806}
+  gameManager: {fileID: 1168267384}
   playerHealthValue: 100
   playerMaxHealthValue: 100
-  enemyManager: {fileID: 6906806}
-  playerDamage: 0
+  playerDamage: 10
+  Action1: {fileID: 873665286}
+  Action2: {fileID: 293411824}
+  Action3: {fileID: 1278817376}
 --- !u!1 &1869548769
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,8 +10,8 @@ public class enemyManager : MonoBehaviour
 
     public int enemyHealth;
     public int enemyMaxHealth;
-    [SerializeField] int enemyMinDamage;
-    [SerializeField] int enemyMaxDamage;
+    [SerializeField] int enemyMinDamage = 10;
+    [SerializeField] int enemyMaxDamage = 10;
     private bool alive = true;
     private bool isCoroutineOn;
     private int Action;
