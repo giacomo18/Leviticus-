@@ -10,6 +10,10 @@ public class HoverController : MonoBehaviour
     public TextMeshProUGUI hoverText;
     public TextMeshProUGUI titleText;
     public bool poisonActive;
+    public bool stunActive;
+    public bool burnActive;
+    public bool healActive;
+    public bool powerfulActive;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +30,23 @@ public class HoverController : MonoBehaviour
         {
             if(poisonActive == true)
             {
-                hoverText.text = "Drains 10% of health at end of turn. \n<i>Press <b>SHIFT</b> for more info</i>";
+                hoverText.text = "Drains 10% of health at the end of the turn.";
+            }
+            else if (stunActive == true)
+            {
+                hoverText.text = "Prevents attacking for a turn.";
+            }
+            else if (burnActive == true)
+            {
+                hoverText.text = "Takes 10% extra damage when attacked";
+            }
+            else if (healActive == true)
+            {
+                hoverText.text = "Heals the player for 10% of health at the end of the turn.";
+            }
+            else if (powerfulActive == true)
+            {
+                hoverText.text = "Drains 10% of health at end of turn.";
             }
             Debug.Log("Left Shift Pressed");
         }
@@ -36,6 +56,22 @@ public class HoverController : MonoBehaviour
             if (poisonActive == true)
             {
                 PoisonTxt();
+            }
+            else if (stunActive == true)
+            {
+                StunTxt();
+            }
+            else if (burnActive == true)
+            {
+                BurnTxt();
+            }
+            else if (healActive == true)
+            {
+                HealTxt();
+            }
+            else if (powerfulActive == true)
+            {
+                PowerfulTxt();
             }
             Debug.Log("Left Shift Unpressed");
         }
@@ -49,10 +85,46 @@ public class HoverController : MonoBehaviour
         hoverText.text = "<i>Press <b>SHIFT</b> for more info</i>";
     }
 
+    public void StunTxt()
+    {
+        hoverBox.SetActive(true);
+        stunActive = true;
+        titleText.text = "Stun";
+        hoverText.text = "<i>Press <b>SHIFT</b> for more info</i>";
+    }
+
+    public void BurnTxt()
+    {
+        hoverBox.SetActive(true);
+        burnActive = true;
+        titleText.text = "Burn";
+        hoverText.text = "<i>Press <b>SHIFT</b> for more info</i>";
+    }
+
+    public void HealTxt()
+    {
+        hoverBox.SetActive(true);
+        healActive = true;
+        titleText.text = "Heal";
+        hoverText.text = "<i>Press <b>SHIFT</b> for more info</i>";
+    }
+
+    public void PowerfulTxt()
+    {
+        hoverBox.SetActive(true);
+        powerfulActive = true;
+        titleText.text = "Powerful";
+        hoverText.text = "<i>Press <b>SHIFT</b> for more info</i>";
+    }
+
     public void HoverExit()
     {
         hoverBox.SetActive(false);
         poisonActive = false;
+        stunActive = false;
+        burnActive = false;
+        healActive = false;
+        powerfulActive = false;
         hoverText.text = "";
         titleText.text = "";
     }

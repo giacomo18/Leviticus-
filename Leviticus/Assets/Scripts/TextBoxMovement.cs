@@ -6,16 +6,15 @@ public class TextBoxMovement : MonoBehaviour
 {
     private Camera mainCamera;
 
-    [SerializeField]
-    private float maxSpeed = 10f;
+    private Vector2 screenBounds;
+    private float objectWidth;
+    private float objectHeight;
 
-    // Start is called before the first frame update
     void Start()
     {
         mainCamera = Camera.main;
     }
 
-    // Update is called once per frame
     void Update()
     {
         FollowMousePosition();
