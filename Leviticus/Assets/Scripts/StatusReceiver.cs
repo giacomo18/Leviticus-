@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
 public class StatusReceiver : MonoBehaviour
@@ -13,11 +14,11 @@ public class StatusReceiver : MonoBehaviour
 
     public playerManager playerManager;
 
-    [SerializeField] Text fireText;
-    [SerializeField] Text poisonText;
-    [SerializeField] Text stunText;
-    [SerializeField] Text healOverTimeText;
-    [SerializeField] Text powerfulText;
+    [SerializeField] TextMeshProUGUI fireText;
+    [SerializeField] TextMeshProUGUI poisonText;
+    [SerializeField] TextMeshProUGUI stunText;
+    [SerializeField] TextMeshProUGUI healOverTimeText;
+    [SerializeField] TextMeshProUGUI powerfulText;
 
     private int fireAmount;
     private int poisonAmount;
