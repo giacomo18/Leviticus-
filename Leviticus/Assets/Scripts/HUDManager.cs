@@ -10,11 +10,11 @@ public class HUDManager : MonoBehaviour
 
     [SerializeField] PlayerPreferences playerPrefs;
 
-    void Awake()
+   /* void Awake()
     {
         playerPrefs = GameObject.Find("PlayerData").GetComponent<PlayerPreferences>();
     }
-
+   
     public void Start()
     {
         CanvasOne.enabled = false;
@@ -34,7 +34,7 @@ public class HUDManager : MonoBehaviour
             CanvasOne.enabled = true;
         }
     }
-
+   */
     public void ButtonEffect(int Interact)
     {
         if (Interact == 1)

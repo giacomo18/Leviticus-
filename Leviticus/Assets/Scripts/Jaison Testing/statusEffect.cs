@@ -11,5 +11,21 @@ public class statusEffect : MonoBehaviour
     [SerializeField] Button healOverTime;
     [SerializeField] Button powerful;
 
+    [SerializeField] Slider playerHealth;
+    [SerializeField] float playerHealthValue;
+    [SerializeField] float playerMaxHealthValue;
 
+
+    public void Effect(int Effect)
+    {
+        if(Effect == 1)
+        {
+            playerHealthValue -= 10;
+        }
+        if (Effect == 2)
+        {
+            playerHealthValue -= 0.1f;
+        }
+        
+    }
 }
