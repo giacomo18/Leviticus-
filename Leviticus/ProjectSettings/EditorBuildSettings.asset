@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JaisonUITesting.unity
     guid: cbe0fbc9497ac874e8ec590cdf2aec4c
+  - enabled: 1
+    path: Assets/Scenes/AJ Testing.unity
+    guid: 42b14e2e2c2e8e749bee2e01c1990299
   m_configObjects: {}

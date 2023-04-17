@@ -24,6 +24,17 @@ public class SceneChanger : MonoBehaviour
         Debug.Log("Scene Loading: Game Scene");
     }
 
+    public void GoAJ()
+    {
+        SceneManager.LoadScene("AJ Testing");
+        Debug.Log("Scene Loading: Game Scene");
+    }
+    public void GoJaison()
+    {
+        SceneManager.LoadScene("JaisonUITesting");
+        Debug.Log("Scene Loading: Game Scene");
+    }
+
     public void ExitGame()
     {
         #if UNITY_EDITOR

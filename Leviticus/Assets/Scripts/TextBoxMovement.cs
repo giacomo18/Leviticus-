@@ -6,10 +6,6 @@ public class TextBoxMovement : MonoBehaviour
 {
     private Camera mainCamera;
 
-    private Vector2 screenBounds;
-    private float objectWidth;
-    private float objectHeight;
-
     void Start()
     {
         mainCamera = Camera.main;
