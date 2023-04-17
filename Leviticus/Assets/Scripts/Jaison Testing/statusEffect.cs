@@ -12,9 +12,7 @@ public class statusEffect : MonoBehaviour
     [SerializeField] Button healOverTime;
     [SerializeField] Button powerful;
 
-    [SerializeField] propertyMeter playerHealth;
-    [SerializeField] float playerHealthValue;
-    [SerializeField] float playerMaxHealthValue = 100;
+    public playerManager playerManager;
 
     [SerializeField] iconStuff iconStuff;
 
@@ -24,11 +22,11 @@ public class statusEffect : MonoBehaviour
     [SerializeField] Text healOverTimeText;
     [SerializeField] Text powerfulText;
 
-    [SerializeField] int fireAmount;
-    [SerializeField] int poisonAmount;
-    [SerializeField] int stunAmount;
-    [SerializeField] int powerfulAmount;
-    [SerializeField] int healOverTimeAmount;
+    private int fireAmount;
+    private int poisonAmount;
+    private int stunAmount;
+    private int powerfulAmount;
+    private int healOverTimeAmount;
 
 
 
@@ -37,8 +35,8 @@ public class statusEffect : MonoBehaviour
     {
         if(Effect == 1)
         {
-            playerHealthValue -= 10;
-            playerHealth.UpdateMeter(playerHealthValue, playerMaxHealthValue);
+            playerManager.playerHealthValue -= 10;
+            playerManager.playerHealth.UpdateMeter(playerManager.playerHealthValue, playerManager.playerMaxHealthValue);
           
             iconStuff.effectValue = 1;
  
@@ -52,8 +50,8 @@ public class statusEffect : MonoBehaviour
         }
         if (Effect == 2)
         {
-            playerHealthValue -= 0.1f;
-            playerHealth.UpdateMeter(playerHealthValue, playerMaxHealthValue);
+            playerManager.playerHealthValue -= 0.1f;
+            playerManager.playerHealth.UpdateMeter(playerManager.playerHealthValue, playerManager.playerMaxHealthValue);
 
             iconStuff.effectValue = 2;
 

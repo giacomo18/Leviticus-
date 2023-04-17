@@ -3,10 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-//This script calculates the values taken away/added to meters in PlayerController.cs
-
-public class propertyMeter : MonoBehaviour
+public class HealthBarScript : MonoBehaviour
 {
 
     public Slider meterSlider;
@@ -17,3 +14,4 @@ public class propertyMeter : MonoBehaviour
         meterSlider.value = percentageResult;
     }
 }
+

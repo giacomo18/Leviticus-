@@ -6,9 +6,7 @@ using UnityEngine.UI;
 
 public class iconStuff : MonoBehaviour
 {
-    [SerializeField] GameObject spawnedIcon;
 
-    
     public Image fire;
     public Image poison;
     public Image stun;
@@ -18,21 +16,6 @@ public class iconStuff : MonoBehaviour
 
     public int effectValue;
 
-    [SerializeField] Image appliedEffect;
-    [SerializeField] GameObject IconDisplayed;
-    [SerializeField] GameObject playerBox;
-    /*
-    public void effectApplied()
-    {
-        for (int i = 0; i < amount; i++)
-        {
-            spawnedIcon = Instantiate(IconDisplayed, new Vector2((playerBox.GetComponent<RectTransform>.size.x / amount) * (i), -300), Quaternion.identity);
-            spawnedIcon.transform.SetParent(transform, false);
-        }
-           
-        
-    }
-    */
     private void Start()
     {
         fire.enabled = false;
