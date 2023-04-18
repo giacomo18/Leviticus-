@@ -36,7 +36,7 @@ public class CSVReader : MonoBehaviour
     {
         string[] data = textAssetData.text.Split(new string[] { ",", "\n" }, StringSplitOptions.None);
 
-        int tableSize = data.Length / 7 - 1;
+        int tableSize = data.Length / 4 - 1;
         myEnemyList.enemy = new Enemy[tableSize];
 
         for(int i = 0; i < tableSize; i++)
