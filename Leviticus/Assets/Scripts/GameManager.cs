@@ -7,17 +7,18 @@ public class GameManager : MonoBehaviour
 {
     public enemyManager enemyManager;
     public playerManager playerManager;
-    public enemyGenerator enemyGenerator;
 
     [SerializeField] Animator Anim;
+    public bool enemyDefeated;
+  
 
 
 
 
     private void Start()
     {
-        enemyGenerator.EnemyGeneration();
         playerManager.playerStart();
+        enemyDefeated = false;
     }
 
     public void playerTurn()
@@ -45,6 +46,16 @@ public class GameManager : MonoBehaviour
             Anim.SetTrigger("Death");
         }
 
+    }
+
+    public void Won()
+    {
+        if (enemyManager.enemyHealth <= 0)
+        {
+           enemyDefeated = true;
+           //win screen here
+        }
+        
     }
 
 
