@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     public enemyManager enemyManager;
     public playerManager playerManager;
 
+    [SerializeField] Animator Anim;
+
 
 
 
@@ -31,7 +33,16 @@ public class GameManager : MonoBehaviour
 
     public void EnemyStart()
     {
-        enemyManager.enemyTurn();
+        if (enemyManager.enemyHealth > 0)
+        {
+            enemyManager.enemyTurn();
+
+        }
+        else
+        {
+            Anim.SetTrigger("Death");
+        }
+
     }
 
 

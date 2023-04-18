@@ -19,6 +19,8 @@ public class enemyManager : MonoBehaviour
     private bool isCoroutineOn;
     private int Action;
 
+    [SerializeField] Animator Anim;
+
 
     private void Start()
     {
@@ -73,10 +75,11 @@ public class enemyManager : MonoBehaviour
         {
             playerManager.playerHealthValue -= Random.Range(enemyMinDamage, enemyMaxDamage);
             playerManager.playerHealthBar.UpdateMeter(playerManager.playerHealthValue, playerManager.playerMaxHealthValue);
+            Anim.SetTrigger("Attack");
         }
         if(Action == 2)
         {
-
+            
         }
 
     }
