@@ -22,9 +22,10 @@ public class playerManager : MonoBehaviour
 
     [SerializeField] Animator anim;
     
-    
 
-    
+
+
+
     private void Start()
     {
         playerPreferences = GameObject.Find("PlayerData").GetComponent<PlayerPreferences>();

@@ -14,6 +14,14 @@ public class HoverController : MonoBehaviour
     public bool burnActive;
     public bool healActive;
     public bool powerfulActive;
+    RectTransform rt;
+
+
+    private void Awake()
+    {
+        rt = hoverBox.GetComponent<RectTransform>();
+
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +30,9 @@ public class HoverController : MonoBehaviour
         poisonActive = false;
         hoverText.text = "";
         titleText.text = "";
+
+        
+        rt.sizeDelta = new Vector2(800, 150);
     }
 
     private void Update()
@@ -77,6 +88,26 @@ public class HoverController : MonoBehaviour
         }
     }
 
+    public void PlayerHealthText()
+    {
+        hoverBox.SetActive(true);
+        titleText.text = "<b>HP:</b> ##/##";
+        rt.sizeDelta = new Vector2(250, 80);
+    }
+    public void EnemyHealthText()
+    {
+        hoverBox.SetActive(true);
+        rt.sizeDelta = new Vector2(250, 80);
+        titleText.text = "<b>HP:</b> ##/##";
+    }
+
+    public void ManaText()
+    {
+        hoverBox.SetActive(true);
+        rt.sizeDelta = new Vector2(250, 80);
+        titleText.text = "<b>Mana:</b> ##";
+    }
+
     public void PoisonTxt()
     {
         hoverBox.SetActive(true);
@@ -119,6 +150,7 @@ public class HoverController : MonoBehaviour
 
     public void HoverExit()
     {
+        rt.sizeDelta = new Vector2(800, 150);
         hoverBox.SetActive(false);
         poisonActive = false;
         stunActive = false;

@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
     public playerManager playerManager;
     public enemyGenerator enemyGenerator;
 
+    [SerializeField] Animator Anim;
+
+
 
 
     private void Start()
@@ -32,7 +35,16 @@ public class GameManager : MonoBehaviour
 
     public void EnemyStart()
     {
-        enemyManager.enemyTurn();
+        if (enemyManager.enemyHealth > 0)
+        {
+            enemyManager.enemyTurn();
+
+        }
+        else
+        {
+            Anim.SetTrigger("Death");
+        }
+
     }
 
 
