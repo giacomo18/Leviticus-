@@ -78,10 +78,6 @@ public class playerManager : MonoBehaviour
         }
        if(Button== 2)
         {
-            //something with game controller
-            //something with enemy controller
-            //probably
-            //enemyManager.enemyController.enemyTurn()
             Action1.interactable = false;
             Action2.interactable = false;
             Action3.interactable = false;

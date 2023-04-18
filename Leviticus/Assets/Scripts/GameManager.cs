@@ -7,12 +7,13 @@ public class GameManager : MonoBehaviour
 {
     public enemyManager enemyManager;
     public playerManager playerManager;
-
+    public enemyGenerator enemyGenerator;
 
 
 
     private void Start()
     {
+        enemyGenerator.EnemyGeneration();
         playerManager.playerStart();
     }
 

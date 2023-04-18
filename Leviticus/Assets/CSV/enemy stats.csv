@@ -1,0 +1,5 @@
+﻿Name,Health,minDamage,maxDamage
+Skeleton,60,0,10
+enemy2,100,5,15
+enemy3,70,5,15
+enemy4,50,10,20
