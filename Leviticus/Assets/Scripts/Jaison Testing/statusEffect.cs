@@ -36,7 +36,7 @@ public class statusEffect : MonoBehaviour
         if(Effect == 1)
         {
             playerManager.playerHealthValue -= 10;
-            playerManager.playerHealth.UpdateMeter(playerManager.playerHealthValue, playerManager.playerMaxHealthValue);
+            playerManager.playerHealthBar.UpdateMeter(playerManager.playerHealthValue, playerManager.playerMaxHealthValue);
           
 
             iconStuff.effectValue = 1;
@@ -52,7 +52,7 @@ public class statusEffect : MonoBehaviour
         if (Effect == 2)
         {
             playerManager.playerHealthValue -= 0.1f;
-            playerManager.playerHealth.UpdateMeter(playerManager.playerHealthValue, playerManager.playerMaxHealthValue);
+            playerManager.playerHealthBar.UpdateMeter(playerManager.playerHealthValue, playerManager.playerMaxHealthValue);
 
             iconStuff.effectValue = 2;
 

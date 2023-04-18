@@ -1,12 +1,15 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class enemyManager : MonoBehaviour
 {
     public playerManager playerManager;
     public HealthBarScript enemyHealthBar;
     public GameManager gameManager;
+    [SerializeField] PlayerPreferences playerPreferences;
 
     public int enemyHealth;
     public int enemyMaxHealth;
@@ -16,6 +19,27 @@ public class enemyManager : MonoBehaviour
     private bool isCoroutineOn;
     private int Action;
 
+
+    private void Start()
+    {
+        playerPreferences = GameObject.Find("PlayerData").GetComponent<PlayerPreferences>();
+        //Pref 3
+        if (playerPreferences.hudTypePref == 3)
+        {
+            enemyHealthBar = GameObject.Find("P1enemyHealthBar").GetComponent<HealthBarScript>();
+
+        }
+        //Pref 2
+        else if (playerPreferences.hudTypePref == 2)
+        {
+            enemyHealthBar = GameObject.Find("P2enemyHealthBar").GetComponent<HealthBarScript>();
+        }
+        //Pref1
+        else
+        {
+            enemyHealthBar = GameObject.Find("P3enemyHealthBar").GetComponent<HealthBarScript>();
+        }
+    }
     public void enemyTurn()
     {
         if (alive == true)
@@ -48,7 +72,7 @@ public class enemyManager : MonoBehaviour
         if(Action == 0)
         {
             playerManager.playerHealthValue -= Random.Range(enemyMinDamage, enemyMaxDamage);
-            playerManager.playerHealth.UpdateMeter(playerManager.playerHealthValue, playerManager.playerMaxHealthValue);
+            playerManager.playerHealthBar.UpdateMeter(playerManager.playerHealthValue, playerManager.playerMaxHealthValue);
         }
         if(Action == 2)
         {
