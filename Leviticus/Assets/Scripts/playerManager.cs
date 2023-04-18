@@ -20,6 +20,10 @@ public class playerManager : MonoBehaviour
     [SerializeField] Button Action2;
     [SerializeField] Button Action3;
 
+    [SerializeField] Animator anim;
+    
+    
+
     
     private void Start()
     {
@@ -65,6 +69,7 @@ public class playerManager : MonoBehaviour
         {
             enemyManager.enemyHealth -= playerDamage;
             enemyManager.enemyHealthBar.UpdateMeter(enemyManager.enemyHealth, enemyManager.enemyMaxHealth);
+            anim.SetTrigger("attack");
 
         }
        if(Button == 1)
