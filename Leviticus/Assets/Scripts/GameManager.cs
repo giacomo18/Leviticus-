@@ -10,10 +10,18 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] Animator Anim;
     public bool enemyDefeated;
-  
 
+    public int enemyFire;
+    public int enemyPoison;
+    public int enemyStun;
+    public int enemyHeal;
+    public int enemyPower;
 
-
+    public int playerFire;
+    public int playerPoison;
+    public int playerStun;
+    public int playerHeal;
+    public int playerPower;
 
     private void Start()
     {

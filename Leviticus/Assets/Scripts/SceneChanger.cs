@@ -27,12 +27,12 @@ public class SceneChanger : MonoBehaviour
     public void GoAJ()
     {
         SceneManager.LoadScene("AJ Testing");
-        Debug.Log("Scene Loading: Game Scene");
+        Debug.Log("Scene Loading: AJ Testing");
     }
     public void GoJaison()
     {
         SceneManager.LoadScene("JaisonUITesting");
-        Debug.Log("Scene Loading: Game Scene");
+        Debug.Log("Scene Loading: JaisonUITesting");
     }
 
     public void ExitGame()
