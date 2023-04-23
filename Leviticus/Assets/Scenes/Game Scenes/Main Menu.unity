@@ -597,9 +597,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 93161642235219056, guid: c1e3e674c6f72bd4a8e87b59b942bfa0, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 1945235218, guid: a2a2eec2e0264d74c8e0f994ce48e960, type: 3}
+    - target: {fileID: 93161642235219056, guid: c1e3e674c6f72bd4a8e87b59b942bfa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1450393647}
+    - target: {fileID: 93161642235219057, guid: c1e3e674c6f72bd4a8e87b59b942bfa0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1601077015, guid: 0dad490fbcc4ef948b4a45711c343a46, type: 3}
     - target: {fileID: 93161642235219071, guid: c1e3e674c6f72bd4a8e87b59b942bfa0, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -656,10 +664,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GoJaison
       objectReference: {fileID: 0}
+    - target: {fileID: 93161642698961778, guid: c1e3e674c6f72bd4a8e87b59b942bfa0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1601077015, guid: 0dad490fbcc4ef948b4a45711c343a46, type: 3}
+    - target: {fileID: 93161643234307952, guid: c1e3e674c6f72bd4a8e87b59b942bfa0, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 1945235218, guid: a2a2eec2e0264d74c8e0f994ce48e960, type: 3}
     - target: {fileID: 93161643234307952, guid: c1e3e674c6f72bd4a8e87b59b942bfa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1450393647}
+    - target: {fileID: 93161643234307953, guid: c1e3e674c6f72bd4a8e87b59b942bfa0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1601077015, guid: 0dad490fbcc4ef948b4a45711c343a46, type: 3}
     - target: {fileID: 93161643234307967, guid: c1e3e674c6f72bd4a8e87b59b942bfa0, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -700,6 +720,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GoAJ
       objectReference: {fileID: 0}
+    - target: {fileID: 93161643759691209, guid: c1e3e674c6f72bd4a8e87b59b942bfa0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1601077015, guid: 0dad490fbcc4ef948b4a45711c343a46, type: 3}
     - target: {fileID: 93161643759691222, guid: c1e3e674c6f72bd4a8e87b59b942bfa0, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -720,6 +744,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 310538490669863815, guid: c1e3e674c6f72bd4a8e87b59b942bfa0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1601077015, guid: 0dad490fbcc4ef948b4a45711c343a46, type: 3}
+    - target: {fileID: 310538490669863832, guid: c1e3e674c6f72bd4a8e87b59b942bfa0, type: 3}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 1945235218, guid: a2a2eec2e0264d74c8e0f994ce48e960, type: 3}
     - target: {fileID: 310538490669863832, guid: c1e3e674c6f72bd4a8e87b59b942bfa0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
