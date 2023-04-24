@@ -133,7 +133,10 @@ public class enemyManager : MonoBehaviour
                 gameManager.playerTurn();
             }
         }
-      
+        else
+        {
+            playerManager.WinCondition();
+        }
     }
 
 

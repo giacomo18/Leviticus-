@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class playerManager : MonoBehaviour
@@ -41,6 +42,10 @@ public class playerManager : MonoBehaviour
     public bool Stun = false;
     public bool HoT = false;
     public bool Power = false;
+    
+    public GameObject winScreen;
+    public GameObject charPlayer;
+    public GameObject charEnemy;
 
 
     private void Start()
@@ -106,6 +111,10 @@ public class playerManager : MonoBehaviour
         StunNum.text = "";
         HealNum.text = "";
         PowerNum.text = "";
+
+        winScreen.SetActive(false);
+        charPlayer.SetActive(true);
+        charEnemy.SetActive(true);
     }
 
     public void playerStart()
@@ -140,6 +149,18 @@ public class playerManager : MonoBehaviour
         
     }
 
+    public void WinCondition()
+    {
+        winScreen.SetActive(true);
+        charPlayer.SetActive(false);
+        charEnemy.SetActive(false);
+    }
+
+    public void LoseCondition()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
 
     public void playerAction(int Button)
     {
@@ -164,11 +185,22 @@ public class playerManager : MonoBehaviour
         }
        if(Button== 2)
         {
-            Action1.interactable = false;
-            Action2.interactable = false;
-            Action3.interactable = false;
+            if (enemyManager.enemyHealth > 0 && playerHealthValue > 0)
+            {
+                Action1.interactable = false;
+                Action2.interactable = false;
+                Action3.interactable = false;
 
-            gameManager.EnemyStart();
+                gameManager.EnemyStart();
+            }
+            else if (enemyManager.enemyHealth == 0)
+            {
+                WinCondition();
+            }
+            else if (playerHealthValue == 0)
+            {
+                LoseCondition();
+            }
         }
     }
 
