@@ -210,6 +210,7 @@ public class playerManager : MonoBehaviour
             {
                 enemyManager.enemyHealth -= playerDamage;
             }
+            enemyManager.enemyHealthBar.UpdateMeter(enemyManager.enemyHealth, enemyManager.enemyMaxHealth);
 
             anim.SetTrigger("attack");
 
