@@ -11,9 +11,8 @@ public class playerManager : MonoBehaviour
     [SerializeField] enemyManager enemyManager;
     [SerializeField] GameManager gameManager;
     [SerializeField] PlayerPreferences playerPreferences;
-    public StatusEffectEffect statusEffectEffect;
 
-    public float playerHealthValue = 50;
+    public float playerHealthValue;
     public float playerMaxHealthValue = 100;
 
     [HideInInspector] public int randomNum;
@@ -28,8 +27,8 @@ public class playerManager : MonoBehaviour
     [SerializeField] GameObject FireImage;
     [SerializeField] GameObject PoisonImage;
     [SerializeField] GameObject StunImage;
-    [HideInInspector] public GameObject HealImage;
-    [HideInInspector] public GameObject PowerImage;
+    public GameObject HealImage;
+    public GameObject PowerImage;
 
     [SerializeField] TextMeshProUGUI FireNum;
     [SerializeField] TextMeshProUGUI PoisonNum;
@@ -42,11 +41,10 @@ public class playerManager : MonoBehaviour
     public bool Stun = false;
     public bool HoT = false;
     public bool Power = false;
-    
+
     public GameObject winScreen;
     public GameObject charPlayer;
     public GameObject charEnemy;
-
 
     private void Start()
     {
@@ -111,40 +109,41 @@ public class playerManager : MonoBehaviour
         StunNum.text = "";
         HealNum.text = "";
         PowerNum.text = "";
-
-
     }
 
     public void playerStart()
     {
-        if(gameManager.playerStun < 1)
+        if (gameManager.playerStun < 1)
         {
             Action1.interactable = true;
             Action2.interactable = true;
             Action3.interactable = true;
-            if(gameManager.playerHeal > 1)
+            if (gameManager.playerHeal > 1)
             {
                 playerHealthValue = playerHealthValue + ((playerHealthValue * 0.10f) * gameManager.playerHeal);
                 playerHealthBar.UpdateMeter(playerHealthValue, playerMaxHealthValue);
             }
 
-            if(gameManager.playerPoison > 1)
+            if (gameManager.playerPoison > 1)
             {
                 playerHealthValue -= playerHealthValue - (gameManager.playerPoison * 0.10f);
                 playerHealthBar.UpdateMeter(playerHealthValue, playerMaxHealthValue);
             }
-            
-            if(gameManager.playerFire > 1)
+
+            if (gameManager.playerFire > 1)
             {
                 playerHealthValue -= playerHealthValue - (gameManager.playerFire + 10);
                 playerHealthBar.UpdateMeter(playerHealthValue, playerMaxHealthValue);
             }
         }
+
         else
         {
             gameManager.EnemyStart();
         }
-        if(gameManager.playerFire != 0)
+
+
+        if (gameManager.playerFire != 0)
         {
             gameManager.playerFire -= 1;
         }
@@ -164,27 +163,40 @@ public class playerManager : MonoBehaviour
         {
             gameManager.playerPower -= 1;
         }
-        UpdateStatusIcons();
 
+        UpdateStatusIcons();
     }
 
+     void Update()
+    {
+        if (!PauseMenu.isPaused)
+        {
+            Action1.interactable = false;
+            Action2.interactable = false;
+            Action3.interactable = false;
+        }
+        else
+        {
+            Action1.interactable = true;
+            Action2.interactable = true;
+            Action3.interactable = true;
+        }
+    }
+    
+        
     public void NextRound()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        
     }
 
-    public void MainMenu()
-    {
-        SceneManager.LoadScene("Main Menu");
-        Debug.Log("Scene Loading: Main Menu");
-    }
+
 
 
     public void playerAction(int Button)
     {
        if(Button == 0)
         {
-            if(Power == true)
+            if (Power == true)
             {
                 enemyManager.enemyHealth -= playerDamage + (gameManager.playerPower * (playerDamage * 0.10f));
             }
@@ -192,7 +204,6 @@ public class playerManager : MonoBehaviour
             {
                 enemyManager.enemyHealth -= playerDamage;
             }
-            enemyManager.enemyHealthBar.UpdateMeter(enemyManager.enemyHealth, enemyManager.enemyMaxHealth);
 
             anim.SetTrigger("attack");
 
@@ -203,22 +214,11 @@ public class playerManager : MonoBehaviour
         }
        if(Button== 2)
         {
-            if (enemyManager.enemyHealth > 0 && playerHealthValue > 0)
-            {
-                Action1.interactable = false;
-                Action2.interactable = false;
-                Action3.interactable = false;
+            Action1.interactable = false;
+            Action2.interactable = false;
+            Action3.interactable = false;
 
-                gameManager.EnemyStart();
-            }
-            else if (enemyManager.enemyHealth <= 0)
-            {
-                gameManager.Won();
-            }
-            else if (playerHealthValue <= 0)
-            {
-                gameManager.Lose();
-            }
+            gameManager.EnemyStart();
         }
     }
 
