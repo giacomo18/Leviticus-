@@ -100,6 +100,10 @@ public class enemyManager : MonoBehaviour
         {
             StartCoroutine(Delay(3));
         }
+        else
+        {
+            playerManager.WinCondition();
+        }
     }
 
 
