@@ -7,8 +7,8 @@ using UnityEngine;
 public class HoverController : MonoBehaviour
 {
 
-    [SerializeField] enemyManager enMan;
-    [SerializeField] playerManager playMan;
+    [SerializeField] enemyManager enemyManager;
+    [SerializeField] playerManager playerManager;
 
     public GameObject hoverBox;
     public TextMeshProUGUI hoverText;
@@ -35,7 +35,9 @@ public class HoverController : MonoBehaviour
         hoverText.text = "";
         titleText.text = "";
 
-        
+        enemyManager = GameObject.Find("Skeleton").GetComponent<enemyManager>();
+        playerManager = GameObject.Find("Zelophehad").GetComponent<playerManager>();
+
         rt.sizeDelta = new Vector2(800, 150);
     }
 
@@ -101,27 +103,30 @@ public class HoverController : MonoBehaviour
     public void PlayerHealthText()
     {
         hoverBox.SetActive(true);
-        titleText.text = "<b>HP:</b>" + playMan.playerHealthValue + "/" + playMan.playerMaxHealthValue.ToString();
-        rt.sizeDelta = new Vector2(215, 100);
+        rt.sizeDelta = new Vector2(800, 85);
+        titleText.text = "<b>HP:</b>" + playerManager.playerHealthValue.ToString() + "/" + playerManager.playerMaxHealthValue.ToString();
+        Debug.Log("<b>HP:</b>" + playerManager.playerHealthValue.ToString() + "/" + playerManager.playerMaxHealthValue.ToString());
+        //titleText.text = "<b>HP:</b> 10/10";
     }
     public void EnemyHealthText()
     {
         hoverBox.SetActive(true);
-        rt.sizeDelta = new Vector2(215, 100);
-        titleText.text = "<b>HP:</b>" + enMan.enemyHealth.ToString() + "/" + enMan.enemyMaxHealth.ToString();
+        rt.sizeDelta = new Vector2(250, 85);
+        titleText.text = "<b>HP:</b>" + enemyManager.enemyHealth.ToString() + "/" + enemyManager.enemyMaxHealth.ToString();
+        //titleText.text = "<b>HP:</b> 10/10";
     }
 
     public void ManaText()
     {
         hoverBox.SetActive(true);
-        rt.sizeDelta = new Vector2(215, 100);
-        titleText.text = "<b>Mana: </b>" + playMan.manaValue.ToString() + "/" + playMan.manaMaxValue.ToString();
+        rt.sizeDelta = new Vector2(250, 85);
+        titleText.text = "<b>Mana: </b>" + playerManager.manaValue.ToString() + "/" + playerManager.manaMaxValue.ToString();
     }
 
     public void PoisonTxt()
     {
         hoverBox.SetActive(true);
-        rt.sizeDelta = new Vector2(175, 100);
+        rt.sizeDelta = new Vector2(175, 120);
         poisonActive = true;
         titleText.text = "Poison";
         hoverText.text = "<i>[Shift]</i>";
@@ -130,7 +135,7 @@ public class HoverController : MonoBehaviour
     public void StunTxt()
     {
         hoverBox.SetActive(true);
-        rt.sizeDelta = new Vector2(150, 100);
+        rt.sizeDelta = new Vector2(150, 120);
         stunActive = true;
         titleText.text = "Stun";
         hoverText.text = "<i>[Shift]</i>";
@@ -139,7 +144,7 @@ public class HoverController : MonoBehaviour
     public void BurnTxt()
     {
         hoverBox.SetActive(true);
-        rt.sizeDelta = new Vector2(150, 100);
+        rt.sizeDelta = new Vector2(150, 120);
         burnActive = true;
         titleText.text = "Burn";
         hoverText.text = "<i>[Shift]</i>";
@@ -148,7 +153,7 @@ public class HoverController : MonoBehaviour
     public void HealTxt()
     {
         hoverBox.SetActive(true);
-        rt.sizeDelta = new Vector2(150, 100);
+        rt.sizeDelta = new Vector2(150, 120);
         healActive = true;
         titleText.text = "Heal";
         hoverText.text = "<i>[Shift]</i>";
@@ -157,7 +162,7 @@ public class HoverController : MonoBehaviour
     public void PowerfulTxt()
     {
         hoverBox.SetActive(true);
-        rt.sizeDelta = new Vector2(215, 100);
+        rt.sizeDelta = new Vector2(215, 120);
         powerfulActive = true;
         titleText.text = "Powerful";
         hoverText.text = "<i>[Shift]</i>";
