@@ -105,15 +105,12 @@ public class HoverController : MonoBehaviour
         hoverBox.SetActive(true);
         rt.sizeDelta = new Vector2(800, 85);
         titleText.text = "<b>HP:</b>" + playerManager.playerHealthValue.ToString() + "/" + playerManager.playerMaxHealthValue.ToString();
-        Debug.Log("<b>HP:</b>" + playerManager.playerHealthValue.ToString() + "/" + playerManager.playerMaxHealthValue.ToString());
-        //titleText.text = "<b>HP:</b> 10/10";
     }
     public void EnemyHealthText()
     {
         hoverBox.SetActive(true);
         rt.sizeDelta = new Vector2(250, 85);
         titleText.text = "<b>HP:</b>" + enemyManager.enemyHealth.ToString() + "/" + enemyManager.enemyMaxHealth.ToString();
-        //titleText.text = "<b>HP:</b> 10/10";
     }
 
     public void ManaText()

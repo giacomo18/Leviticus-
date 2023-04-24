@@ -44,10 +44,6 @@ public class playerManager : MonoBehaviour
     public bool HoT = false;
     public bool Power = false;
 
-    public GameObject winScreen;
-    public GameObject charPlayer;
-    public GameObject charEnemy;
-
     private void Start()
     {
         playerPreferences = GameObject.Find("PlayerData").GetComponent<PlayerPreferences>();
@@ -189,14 +185,6 @@ public class playerManager : MonoBehaviour
         }
     }
     */
-        
-    public void NextRound()
-    {
-        
-    }
-
-
-
 
     public void playerAction(int Button)
     {

@@ -425,8 +425,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 159993200}
-        m_TargetAssemblyTypeName: playerManager, Assembly-CSharp
+      - m_Target: {fileID: 2109955666}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: MainMenu
         m_Mode: 1
         m_Arguments:
@@ -823,8 +823,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 159993200}
-        m_TargetAssemblyTypeName: playerManager, Assembly-CSharp
+      - m_Target: {fileID: 2109955666}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
         m_MethodName: NextRound
         m_Mode: 1
         m_Arguments:
@@ -4376,7 +4376,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &966440931
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11220,7 +11220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1912180167
 RectTransform:
   m_ObjectHideFlags: 0

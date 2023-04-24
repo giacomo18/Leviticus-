@@ -62,6 +62,7 @@ public class GameManager : MonoBehaviour
         else
         {
             Anim.SetTrigger("Death");
+            Won();
         }
 
     }
@@ -85,6 +86,13 @@ public class GameManager : MonoBehaviour
         charEnemy.SetActive(false);
     }
 
+    public void NextRound()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 
-
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
 }
