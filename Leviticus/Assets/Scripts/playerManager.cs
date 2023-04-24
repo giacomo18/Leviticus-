@@ -112,9 +112,7 @@ public class playerManager : MonoBehaviour
         HealNum.text = "";
         PowerNum.text = "";
 
-        winScreen.SetActive(false);
-        charPlayer.SetActive(true);
-        charEnemy.SetActive(true);
+
     }
 
     public void playerStart()
@@ -149,16 +147,15 @@ public class playerManager : MonoBehaviour
         
     }
 
-    public void WinCondition()
-    {
-        winScreen.SetActive(true);
-        charPlayer.SetActive(false);
-        charEnemy.SetActive(false);
-    }
-
-    public void LoseCondition()
+    public void NextRound()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+        Debug.Log("Scene Loading: Main Menu");
     }
 
 
@@ -193,13 +190,13 @@ public class playerManager : MonoBehaviour
 
                 gameManager.EnemyStart();
             }
-            else if (enemyManager.enemyHealth == 0)
+            else if (enemyManager.enemyHealth <= 0)
             {
-                WinCondition();
+                gameManager.Won();
             }
-            else if (playerHealthValue == 0)
+            else if (playerHealthValue <= 0)
             {
-                LoseCondition();
+                gameManager.Lose();
             }
         }
     }
