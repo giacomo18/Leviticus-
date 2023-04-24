@@ -925,6 +925,10 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 7422517058925832473, guid: 68450ff81d6c17943a2cf7db7ef18094, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7422517058925832473, guid: 68450ff81d6c17943a2cf7db7ef18094, type: 3}
       propertyPath: m_SortingOrder
       value: 2
       objectReference: {fileID: 0}
@@ -990,6 +994,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7422517058925832479, guid: 68450ff81d6c17943a2cf7db7ef18094, type: 3}
       propertyPath: m_Name
+      value: Zelophehad
+      objectReference: {fileID: 0}
+    - target: {fileID: 7422517058925832479, guid: 68450ff81d6c17943a2cf7db7ef18094, type: 3}
+      propertyPath: m_TagString
       value: Zelophehad
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -11483,6 +11491,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 676258368}
   SettingsPanel: {fileID: 676258367}
+  Zelophehad: {fileID: 159993202}
+  Skeleton: {fileID: 1134383952}
 --- !u!1 &1905500869
 GameObject:
   m_ObjectHideFlags: 0
