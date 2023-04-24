@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game Scenes/Lose Condition.unity
     guid: 1c59e16997e15094eb45143a7ce9e6c9
+  - enabled: 1
+    path: Assets/Scenes/Giacomo's Testing Scene.unity
+    guid: da9d83c1b4dac094b8a1fc4b280be424
   m_configObjects: {}

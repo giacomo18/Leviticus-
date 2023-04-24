@@ -35,6 +35,12 @@ public class SceneChanger : MonoBehaviour
         Debug.Log("Scene Loading: JaisonUITesting");
     }
 
+    public void GoGiacomo()
+    {
+        SceneManager.LoadScene("Giacomo's Testing Scene");
+        Debug.Log("Scene Loading: GiacomoUITesting");
+    }
+
     public void ExitGame()
     {
         #if UNITY_EDITOR
