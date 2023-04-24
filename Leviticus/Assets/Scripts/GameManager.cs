@@ -23,10 +23,20 @@ public class GameManager : MonoBehaviour
     public int playerHeal;
     public int playerPower;
 
+    public GameObject winScreen;
+    public GameObject loseScreen;
+    public GameObject charPlayer;
+    public GameObject charEnemy;
+
     private void Start()
     {
         playerManager.playerStart();
         enemyDefeated = false;
+
+        winScreen.SetActive(false);
+        loseScreen.SetActive(false);
+        charPlayer.SetActive(true);
+        charEnemy.SetActive(true);
     }
 
     public void playerTurn()
@@ -61,15 +71,18 @@ public class GameManager : MonoBehaviour
         if (enemyManager.enemyHealth <= 0)
         {
            enemyDefeated = true;
-           //win screen here
+           winScreen.SetActive(true);
+           charPlayer.SetActive(false);
+           charEnemy.SetActive(false);
         }
-        
     }
 
 
     public void Lose()
     {
-        SceneManager.LoadScene("Lose Condition");
+        loseScreen.SetActive(true);
+        charPlayer.SetActive(false);
+        charEnemy.SetActive(false);
     }
 
 

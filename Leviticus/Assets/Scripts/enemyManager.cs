@@ -132,10 +132,11 @@ public class enemyManager : MonoBehaviour
             {
                 gameManager.playerTurn();
             }
+            StartCoroutine(Delay(1));
         }
         else
         {
-            playerManager.WinCondition();
+            gameManager.Won();
         }
     }
 
