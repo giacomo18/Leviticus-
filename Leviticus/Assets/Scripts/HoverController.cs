@@ -115,7 +115,7 @@ public class HoverController : MonoBehaviour
     {
         hoverBox.SetActive(true);
         rt.sizeDelta = new Vector2(215, 100);
-        titleText.text = "<b>Mana:</b> ##";
+        titleText.text = "<b>Mana: </b>" + playMan.manaValue.ToString() + "/" + playMan.manaMaxValue.ToString();
     }
 
     public void PoisonTxt()

@@ -14,6 +14,8 @@ public class playerManager : MonoBehaviour
 
     public float playerHealthValue;
     public float playerMaxHealthValue = 100;
+    public float manaValue;
+    public float manaMaxValue;
 
     [HideInInspector] public int randomNum;
     
@@ -109,10 +111,14 @@ public class playerManager : MonoBehaviour
         StunNum.text = "";
         HealNum.text = "";
         PowerNum.text = "";
+
+        manaMaxValue = 3;
     }
 
     public void playerStart()
     {
+        manaValue = manaMaxValue;
+
         if (gameManager.playerStun == 0)
         {
             Action1.interactable = true;
@@ -210,7 +216,11 @@ public class playerManager : MonoBehaviour
         }
        if(Button == 1)
         {
-            StatusEffect();
+            if(manaValue > 0)
+            {
+                StatusEffect();
+                manaValue -= 1;
+            }
         }
        if(Button== 2)
         {
