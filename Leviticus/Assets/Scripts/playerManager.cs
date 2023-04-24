@@ -13,7 +13,7 @@ public class playerManager : MonoBehaviour
     [SerializeField] PlayerPreferences playerPreferences;
     public StatusEffectEffect statusEffectEffect;
 
-    public float playerHealthValue;
+    public float playerHealthValue = 50;
     public float playerMaxHealthValue = 100;
 
     [HideInInspector] public int randomNum;
@@ -119,26 +119,26 @@ public class playerManager : MonoBehaviour
 
     public void playerStart()
     {
-        if(gameManager.playerStun == 0)
+        if(gameManager.playerStun < 1)
         {
             Action1.interactable = true;
             Action2.interactable = true;
             Action3.interactable = true;
             if(gameManager.playerHeal > 1)
             {
-                playerHealthValue = playerHealthValue * 0.10f;
+                playerHealthValue = playerHealthValue + ((playerHealthValue * 0.10f) * gameManager.playerHeal);
                 playerHealthBar.UpdateMeter(playerHealthValue, playerMaxHealthValue);
             }
 
             if(gameManager.playerPoison > 1)
             {
-                playerHealthValue = playerHealthValue - (gameManager.playerPoison * 0.10f);
+                playerHealthValue -= playerHealthValue - (gameManager.playerPoison * 0.10f);
                 playerHealthBar.UpdateMeter(playerHealthValue, playerMaxHealthValue);
             }
             
             if(gameManager.playerFire > 1)
             {
-                playerHealthValue = playerHealthValue - (gameManager.playerFire + 10);
+                playerHealthValue -= playerHealthValue - (gameManager.playerFire + 10);
                 playerHealthBar.UpdateMeter(playerHealthValue, playerMaxHealthValue);
             }
         }
@@ -207,7 +207,7 @@ public class playerManager : MonoBehaviour
     public void StatusEffect()
     {
         randomNum = Random.Range(0, 5);
-        Debug.Log(randomNum);
+
         if(randomNum == 0)
         {
             gameManager.enemyFire += 1;

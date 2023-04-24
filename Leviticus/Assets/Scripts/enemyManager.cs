@@ -106,9 +106,9 @@ public class enemyManager : MonoBehaviour
     {
         if(alive == true)
         {
-            if (gameManager.playerStun == 0)
+            if (gameManager.enemyStun < 1)
             {
-                if (gameManager.playerHeal > 1)
+                if (gameManager.enemyHeal > 1)
                 {
                     enemyHealth = enemyHealth * 0.10f;
                     enemyHealthBar.UpdateMeter(enemyHealth, enemyMaxHealth);
@@ -130,6 +130,7 @@ public class enemyManager : MonoBehaviour
             }
             else
             {
+                
                 gameManager.playerTurn();
             }
         }

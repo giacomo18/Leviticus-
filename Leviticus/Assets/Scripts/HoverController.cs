@@ -41,23 +41,23 @@ public class HoverController : MonoBehaviour
         {
             if(poisonActive == true)
             {
-                hoverText.text = "Drains 10% of health at the end of the turn.";
+                hoverText.text = "Drains life at the end of turn";
             }
             else if (stunActive == true)
             {
-                hoverText.text = "Prevents attacking for a turn.";
+                hoverText.text = "Miss a turn";
             }
             else if (burnActive == true)
             {
-                hoverText.text = "Takes 10% extra damage when attacked";
+                hoverText.text = "Take additional damage at the end of turn";
             }
             else if (healActive == true)
             {
-                hoverText.text = "Heals the player for 10% of health at the end of the turn.";
+                hoverText.text = "Heals the player at the end of the turn.";
             }
             else if (powerfulActive == true)
             {
-                hoverText.text = "Drains 10% of health at end of turn.";
+                hoverText.text = "Deal more damage.";
             }
             Debug.Log("Left Shift Pressed");
         }
