@@ -123,6 +123,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &11990847
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 11990848}
+  m_Layer: 0
+  m_Name: test
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &11990848
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 11990847}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 482.1111, y: 208.68088, z: 94.74427}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &14030386 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5346191854465860707, guid: 051c8533d98369740bb42c8968c165b8, type: 3}
@@ -14520,6 +14551,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 015b5ba4efe8c494ebdae2c4760e68f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enMan: {fileID: 0}
+  playMan: {fileID: 0}
   hoverBox: {fileID: 1446961871}
   hoverText: {fileID: 1446961870}
   titleText: {fileID: 1446961868}
