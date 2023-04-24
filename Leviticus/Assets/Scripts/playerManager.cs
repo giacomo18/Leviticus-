@@ -166,7 +166,7 @@ public class playerManager : MonoBehaviour
 
         UpdateStatusIcons();
     }
-
+    /*
      void Update()
     {
         if (!PauseMenu.isPaused)
@@ -182,7 +182,7 @@ public class playerManager : MonoBehaviour
             Action3.interactable = true;
         }
     }
-    
+    */
         
     public void NextRound()
     {
