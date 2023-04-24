@@ -1049,6 +1049,56 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &194790517 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1599534237959520800, guid: 8dc6a133a0ebd0f408cfd9f0296a2c91, type: 3}
+  m_PrefabInstance: {fileID: 1989539674}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &194790521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194790517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1874935481}
+          m_TargetAssemblyTypeName: HoverController, Assembly-CSharp
+          m_MethodName: EnemyHealthText
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1874935481}
+          m_TargetAssemblyTypeName: HoverController, Assembly-CSharp
+          m_MethodName: HoverExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &208805220
 GameObject:
   m_ObjectHideFlags: 0
@@ -8062,6 +8112,18 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7937457933663494107, guid: b772d26bdff15f64d9e4e0b33268df39, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937457933663494107, guid: b772d26bdff15f64d9e4e0b33268df39, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7937457933663494107, guid: b772d26bdff15f64d9e4e0b33268df39, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8392090740035376461, guid: b772d26bdff15f64d9e4e0b33268df39, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 5.6000004
@@ -8773,6 +8835,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3813028707951768070, guid: 52b10f7550942ef4aa473305c7da03ab, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3813028707951768070, guid: 52b10f7550942ef4aa473305c7da03ab, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3813028707951768070, guid: 52b10f7550942ef4aa473305c7da03ab, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3998405512526914814, guid: 52b10f7550942ef4aa473305c7da03ab, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 21.7
@@ -9191,7 +9265,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8933811852238352487, guid: 52b10f7550942ef4aa473305c7da03ab, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -818
+      value: -793
       objectReference: {fileID: 0}
     - target: {fileID: 8933811852238352487, guid: 52b10f7550942ef4aa473305c7da03ab, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -9241,6 +9315,51 @@ Canvas:
   m_CorrespondingSourceObject: {fileID: 1091944486927904929, guid: 52b10f7550942ef4aa473305c7da03ab, type: 3}
   m_PrefabInstance: {fileID: 1498610678}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1498610689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498610681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1874935481}
+          m_TargetAssemblyTypeName: HoverController, Assembly-CSharp
+          m_MethodName: EnemyHealthText
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1874935481}
+          m_TargetAssemblyTypeName: HoverController, Assembly-CSharp
+          m_MethodName: HoverExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1529379715
 GameObject:
   m_ObjectHideFlags: 0
@@ -9493,6 +9612,56 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1581051710 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2872421733138814156, guid: 8dc6a133a0ebd0f408cfd9f0296a2c91, type: 3}
+  m_PrefabInstance: {fileID: 1989539674}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1581051714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581051710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1874935481}
+          m_TargetAssemblyTypeName: HoverController, Assembly-CSharp
+          m_MethodName: PlayerHealthText
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1874935481}
+          m_TargetAssemblyTypeName: HoverController, Assembly-CSharp
+          m_MethodName: HoverExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1584898135
 GameObject:
   m_ObjectHideFlags: 0
@@ -9661,6 +9830,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1597678850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498610683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1874935481}
+          m_TargetAssemblyTypeName: HoverController, Assembly-CSharp
+          m_MethodName: PlayerHealthText
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1874935481}
+          m_TargetAssemblyTypeName: HoverController, Assembly-CSharp
+          m_MethodName: HoverExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1615802764
 GameObject:
   m_ObjectHideFlags: 0
@@ -10297,6 +10511,96 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   meterSlider: {fileID: 1765225536}
+--- !u!114 &1765225540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399958442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1874935481}
+          m_TargetAssemblyTypeName: HoverController, Assembly-CSharp
+          m_MethodName: EnemyHealthText
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1874935481}
+          m_TargetAssemblyTypeName: HoverController, Assembly-CSharp
+          m_MethodName: HoverExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1765225541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1399958444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1874935481}
+          m_TargetAssemblyTypeName: HoverController, Assembly-CSharp
+          m_MethodName: PlayerHealthText
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1874935481}
+          m_TargetAssemblyTypeName: HoverController, Assembly-CSharp
+          m_MethodName: HoverExit
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1779720528
 GameObject:
   m_ObjectHideFlags: 0
@@ -10714,6 +11018,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 015b5ba4efe8c494ebdae2c4760e68f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enMan: {fileID: 0}
+  playMan: {fileID: 0}
   hoverBox: {fileID: 2141272658}
   hoverText: {fileID: 2141272656}
   titleText: {fileID: 2141272657}
@@ -11562,6 +11868,18 @@ PrefabInstance:
     - target: {fileID: 8175769302455315764, guid: 8dc6a133a0ebd0f408cfd9f0296a2c91, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8367956138350159417, guid: 8dc6a133a0ebd0f408cfd9f0296a2c91, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8367956138350159417, guid: 8dc6a133a0ebd0f408cfd9f0296a2c91, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8367956138350159417, guid: 8dc6a133a0ebd0f408cfd9f0296a2c91, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8520007466969747879, guid: 8dc6a133a0ebd0f408cfd9f0296a2c91, type: 3}
       propertyPath: m_AnchorMax.y
@@ -12412,7 +12730,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8110209802933416384, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8110209802933416385, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
       propertyPath: m_Pivot.x
@@ -12444,7 +12762,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8110209802933416385, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 800
+      value: 196.2576
       objectReference: {fileID: 0}
     - target: {fileID: 8110209802933416385, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
       propertyPath: m_SizeDelta.y
@@ -12492,7 +12810,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8110209802933416385, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 900
+      value: 587.2738
       objectReference: {fileID: 0}
     - target: {fileID: 8110209802933416385, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -12513,6 +12831,114 @@ PrefabInstance:
     - target: {fileID: 8110209802933416385, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110209802933416414, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110209802949218560, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -620
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110209802949218560, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110209802949218560, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -290
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110209802949218560, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110209802949218590, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
+      propertyPath: m_text
+      value: New Text
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110209802949218590, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 90506b65b9dd74640b2854190fbd6f4b, type: 2}
+    - target: {fileID: 8110209802949218590, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110209802949218590, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110209802949218590, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110209802949218590, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 1373917398452564075, guid: 90506b65b9dd74640b2854190fbd6f4b, type: 2}
+    - target: {fileID: 8110209802949218590, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4278190080
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110209802949218590, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110209804345480044, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -620
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110209804345480044, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110209804345480044, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -290
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110209804345480044, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110209804345480046, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
+      propertyPath: m_text
+      value: Miss a turn
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110209804345480046, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
+      propertyPath: m_fontSize
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110209804345480046, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 90506b65b9dd74640b2854190fbd6f4b, type: 2}
+    - target: {fileID: 8110209804345480046, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
+      propertyPath: m_fontColor.b
+      value: 0.6037736
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110209804345480046, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
+      propertyPath: m_fontColor.g
+      value: 0.6037736
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110209804345480046, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
+      propertyPath: m_fontColor.r
+      value: 0.6037736
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110209804345480046, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110209804345480046, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 1373917398452564075, guid: 90506b65b9dd74640b2854190fbd6f4b, type: 2}
+    - target: {fileID: 8110209804345480046, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4288322202
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110209804345480046, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}
+      propertyPath: m_enableWordWrapping
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58dc00ec00c3fde4d9d1aa553a4bb8f6, type: 3}

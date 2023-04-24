@@ -113,7 +113,7 @@ public class playerManager : MonoBehaviour
 
     public void playerStart()
     {
-        if (gameManager.playerStun < 1)
+        if (gameManager.playerStun == 0)
         {
             Action1.interactable = true;
             Action2.interactable = true;
