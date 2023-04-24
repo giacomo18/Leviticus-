@@ -28,14 +28,14 @@ public class enemyManager : MonoBehaviour
     [SerializeField] GameObject FireImage;
     [SerializeField] GameObject PoisonImage;
     [SerializeField] GameObject StunImage;
-    [SerializeField] GameObject HealImage;
-    [SerializeField] GameObject PowerImage;
+    public GameObject HealImage;
+    public GameObject PowerImage;
 
     [SerializeField] TextMeshProUGUI FireNum;
     [SerializeField] TextMeshProUGUI PoisonNum;
     [SerializeField] TextMeshProUGUI StunNum;
-    [SerializeField] TextMeshProUGUI HealNum;
-    [SerializeField] TextMeshProUGUI PowerNum;
+    public TextMeshProUGUI HealNum;
+    public TextMeshProUGUI PowerNum;
 
 
     private void Start()
@@ -147,11 +147,11 @@ public class enemyManager : MonoBehaviour
             }
             else if (randomNum == 3)
             {
-                gameManager.playerHeal += 1;
+                gameManager.enemyHeal += 1;
             }
             else if (randomNum == 4)
             {
-                gameManager.playerPower += 1;
+                gameManager.enemyPower += 1;
             }
             UpdateStatusIcons();
         }
@@ -195,24 +195,24 @@ public class enemyManager : MonoBehaviour
 
         if (gameManager.playerHeal >= 1)
         {
-            HealImage.GetComponent<Image>().enabled = true;
-            HealNum.text = gameManager.playerHeal.ToString();
+            playerManager.HealImage.GetComponent<Image>().enabled = true;
+            playerManager.HealNum.text = gameManager.enemyHeal.ToString();
         }
         else
         {
-            HealImage.GetComponent<Image>().enabled = false;
-            HealNum.text = "";
+            playerManager.HealImage.GetComponent<Image>().enabled = false;
+            playerManager.HealNum.text = "";
         }
 
         if (gameManager.playerPower >= 1)
         {
-            PowerImage.GetComponent<Image>().enabled = true;
-            PowerNum.text = gameManager.playerPower.ToString();
+            playerManager.PowerImage.GetComponent<Image>().enabled = true;
+            playerManager.PowerNum.text = gameManager.enemyPower.ToString();
         }
         else
         {
-            PowerImage.GetComponent<Image>().enabled = false;
-            PowerNum.text = "";
+            playerManager.PowerImage.GetComponent<Image>().enabled = false;
+            playerManager.PowerNum.text = "";
         }
     }
 }
