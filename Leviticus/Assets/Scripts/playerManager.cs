@@ -144,7 +144,28 @@ public class playerManager : MonoBehaviour
         {
             gameManager.EnemyStart();
         }
-        
+        if(gameManager.playerFire != 0)
+        {
+            gameManager.playerFire -= 1;
+        }
+        if (gameManager.playerPoison != 0)
+        {
+            gameManager.playerPoison -= 1;
+        }
+        if (gameManager.playerStun != 0)
+        {
+            gameManager.playerStun -= 1;
+        }
+        if (gameManager.playerHeal != 0)
+        {
+            gameManager.playerHeal -= 1;
+        }
+        if (gameManager.playerPower != 0)
+        {
+            gameManager.playerPower -= 1;
+        }
+        UpdateStatusIcons();
+
     }
 
     public void NextRound()

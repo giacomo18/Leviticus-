@@ -133,6 +133,28 @@ public class enemyManager : MonoBehaviour
                 
                 gameManager.playerTurn();
             }
+
+            if (gameManager.enemyFire != 0)
+            {
+                gameManager.enemyFire -= 1;
+            }
+            if (gameManager.enemyPoison != 0)
+            {
+                gameManager.enemyPoison -= 1;
+            }
+            if (gameManager.enemyStun != 0)
+            {
+                gameManager.enemyStun -= 1;
+            }
+            if (gameManager.enemyHeal != 0)
+            {
+                gameManager.enemyHeal -= 1;
+            }
+            if (gameManager.enemyPower != 0)
+            {
+                gameManager.enemyPower -= 1;
+            }
+            UpdateStatusIcons();
             StartCoroutine(Delay(1));
         }
         else
