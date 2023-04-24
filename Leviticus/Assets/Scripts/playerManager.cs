@@ -168,10 +168,10 @@ public class playerManager : MonoBehaviour
 
         UpdateStatusIcons();
     }
-    /*
+    
      void Update()
     {
-        if (!PauseMenu.isPaused)
+        if (PauseMenu.isPaused)
         {
             Action1.interactable = false;
             Action2.interactable = false;
@@ -184,7 +184,6 @@ public class playerManager : MonoBehaviour
             Action3.interactable = true;
         }
     }
-    */
 
     public void playerAction(int Button)
     {

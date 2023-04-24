@@ -25,11 +25,13 @@ public class PauseMenu : MonoBehaviour
             if (isPaused)
             {
                 ResumeGame();
+                Debug.Log("LMAO");
 
             }
             else
             {
                 PauseGame();
+                Debug.Log("Fuck");
             }
         }
     }
