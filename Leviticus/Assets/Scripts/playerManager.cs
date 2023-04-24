@@ -10,13 +10,14 @@ public class playerManager : MonoBehaviour
     [SerializeField] enemyManager enemyManager;
     [SerializeField] GameManager gameManager;
     [SerializeField] PlayerPreferences playerPreferences;
+    public StatusEffectEffect statusEffectEffect;
 
     public float playerHealthValue;
     public float playerMaxHealthValue = 100;
 
-    public int randomNum;
+    [HideInInspector] public int randomNum;
     
-    [SerializeField] int playerDamage;
+    [SerializeField] float playerDamage;
     [SerializeField] Button Action1;
     [SerializeField] Button Action2;
     [SerializeField] Button Action3;
@@ -26,14 +27,20 @@ public class playerManager : MonoBehaviour
     [SerializeField] GameObject FireImage;
     [SerializeField] GameObject PoisonImage;
     [SerializeField] GameObject StunImage;
-    public GameObject HealImage;
-    public GameObject PowerImage;
+    [HideInInspector] public GameObject HealImage;
+    [HideInInspector] public GameObject PowerImage;
 
     [SerializeField] TextMeshProUGUI FireNum;
     [SerializeField] TextMeshProUGUI PoisonNum;
     [SerializeField] TextMeshProUGUI StunNum;
     public TextMeshProUGUI HealNum;
     public TextMeshProUGUI PowerNum;
+
+    public bool Fire = false;
+    public bool Poison = false;
+    public bool Stun = false;
+    public bool HoT = false;
+    public bool Power = false;
 
 
     private void Start()
@@ -103,9 +110,34 @@ public class playerManager : MonoBehaviour
 
     public void playerStart()
     {
-        Action1.interactable = true;
-        Action2.interactable = true;
-        Action3.interactable = true;
+        if(gameManager.playerStun == 0)
+        {
+            Action1.interactable = true;
+            Action2.interactable = true;
+            Action3.interactable = true;
+            if(gameManager.playerHeal > 1)
+            {
+                playerHealthValue = playerHealthValue * 0.10f;
+                playerHealthBar.UpdateMeter(playerHealthValue, playerMaxHealthValue);
+            }
+
+            if(gameManager.playerPoison > 1)
+            {
+                playerHealthValue = playerHealthValue - (gameManager.playerPoison * 0.10f);
+                playerHealthBar.UpdateMeter(playerHealthValue, playerMaxHealthValue);
+            }
+            
+            if(gameManager.playerFire > 1)
+            {
+                playerHealthValue = playerHealthValue - (gameManager.playerFire + 10);
+                playerHealthBar.UpdateMeter(playerHealthValue, playerMaxHealthValue);
+            }
+        }
+        else
+        {
+            gameManager.EnemyStart();
+        }
+        
     }
 
 
@@ -113,8 +145,16 @@ public class playerManager : MonoBehaviour
     {
        if(Button == 0)
         {
-            enemyManager.enemyHealth -= playerDamage;
+            if(Power == true)
+            {
+                enemyManager.enemyHealth -= playerDamage + (gameManager.playerPower * (playerDamage * 0.10f));
+            }
+            else
+            {
+                enemyManager.enemyHealth -= playerDamage;
+            }
             enemyManager.enemyHealthBar.UpdateMeter(enemyManager.enemyHealth, enemyManager.enemyMaxHealth);
+
             anim.SetTrigger("attack");
 
         }
@@ -169,55 +209,65 @@ public class playerManager : MonoBehaviour
         {
             FireImage.GetComponent<Image>().enabled = true;
             FireNum.text = gameManager.enemyFire.ToString();
+            enemyManager.Fire = true;
         }
         else
         {
             FireImage.GetComponent<Image>().enabled = false;
             FireNum.text = "";
+            enemyManager.Fire = false;
         }
 
         if (gameManager.enemyPoison >= 1)
         {
             PoisonImage.GetComponent<Image>().enabled = true;
             PoisonNum.text = gameManager.enemyPoison.ToString();
+            enemyManager.Poison = true;
         }
         else
         {
             PoisonImage.GetComponent<Image>().enabled = false;
             PoisonNum.text = "";
+            enemyManager.Poison = false;
         }
 
         if (gameManager.enemyStun >= 1)
         {
             StunImage.GetComponent<Image>().enabled = true;
             StunNum.text = gameManager.enemyStun.ToString();
+            enemyManager.Stun = true;
         }
         else
         {
             StunImage.GetComponent<Image>().enabled = false;
             StunNum.text = "";
+            enemyManager.Stun = false;
         }
 
         if (gameManager.playerHeal >= 1)
         {
             enemyManager.HealImage.GetComponent<Image>().enabled = true;
             enemyManager.HealNum.text = gameManager.playerHeal.ToString();
+            HoT = true;
         }
         else
         {
             enemyManager.HealImage.GetComponent<Image>().enabled = false;
             enemyManager.HealNum.text = "";
+            HoT = false;
         }
 
         if (gameManager.playerPower >= 1)
         {
             enemyManager.PowerImage.GetComponent<Image>().enabled = true;
             enemyManager.PowerNum.text = gameManager.playerPower.ToString();
+            Power = true;
         }
         else
         {
             enemyManager.PowerImage.GetComponent<Image>().enabled = false;
             enemyManager.PowerNum.text = "";
+            Power = false;
         }
     }
 }
