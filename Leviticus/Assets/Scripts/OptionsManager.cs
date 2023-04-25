@@ -36,7 +36,7 @@ public class OptionsManager : MonoBehaviour
     [SerializeField] PlayerPreferences playerPrefs;
 
 
-    // Start is called before the first frame update
+
     void Start()
     {
         OptionsVideo();
@@ -69,6 +69,8 @@ public class OptionsManager : MonoBehaviour
             UIScale1();
         }
     }
+
+
 
     public void OptionsVideo()
     {

@@ -62,31 +62,42 @@ public class HUDManager : MonoBehaviour
             Scale1();
         }
     }
-   
-    public void ButtonEffect(int Interact)
+
+
+    public void UpdateUI()
     {
-        if (Interact == 1)
+        CanvasOne.enabled = false;
+        CanvasTwo.enabled = false;
+        CanvasThree.enabled = false;
+
+        if (playerPrefs.hudTypePref == 3)
+        {
+            CanvasThree.enabled = true;
+        }
+        else if (playerPrefs.hudTypePref == 2)
+        {
+            CanvasTwo.enabled = true;
+        }
+        else
         {
             CanvasOne.enabled = true;
-            CanvasTwo.enabled = false;
-            CanvasThree.enabled = false;
-
         }
-        if (Interact == 2)
-        {
-            CanvasOne.enabled = false;
-            CanvasTwo.enabled = true;
-            CanvasThree.enabled = false;
 
-        }
-        if (Interact == 3)
+        if (playerPrefs.hudScalePref == 3)
         {
-            CanvasOne.enabled = false;
-            CanvasTwo.enabled = false;
-            CanvasThree.enabled = true; ;
+            Scale3();
+        }
+        else if (playerPrefs.hudScalePref == 2)
+        {
+            Scale2();
+        }
+        else
+        {
+            Scale1();
         }
     }
 
+  
     public void Scale1()
     {
         if (playerPrefs.hudTypePref == 3)

@@ -20,9 +20,9 @@ public class playerManager : MonoBehaviour
     [HideInInspector] public int randomNum;
     
     [SerializeField] float playerDamage;
-    [SerializeField] Button Action1;
-    [SerializeField] Button Action2;
-    [SerializeField] Button Action3;
+    public Button Action1;
+    public Button Action2;
+    public Button Action3;
 
     [SerializeField] Animator anim;
 
@@ -44,7 +44,14 @@ public class playerManager : MonoBehaviour
     public bool HoT = false;
     public bool Power = false;
 
+
     private void Start()
+    {
+        UpdateUI();
+    }
+
+
+    public void UpdateUI()
     {
         playerPreferences = GameObject.Find("PlayerData").GetComponent<PlayerPreferences>();
         //Pref 3
@@ -169,21 +176,7 @@ public class playerManager : MonoBehaviour
         UpdateStatusIcons();
     }
     
-     void Update()
-    {
-        if (PauseMenu.isPaused)
-        {
-            Action1.interactable = false;
-            Action2.interactable = false;
-            Action3.interactable = false;
-        }
-        else
-        {
-            Action1.interactable = true;
-            Action2.interactable = true;
-            Action3.interactable = true;
-        }
-    }
+   
 
     public void playerAction(int Button)
     {
