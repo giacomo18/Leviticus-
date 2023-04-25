@@ -60,7 +60,7 @@ public class playerManager : MonoBehaviour
             Action1 = GameObject.Find("P3Attack").GetComponent<Button>();
             Action2 = GameObject.Find("P3Action").GetComponent<Button>();
             Action3 = GameObject.Find("P3End").GetComponent<Button>();
-            playerHealthBar = GameObject.Find("P1playerHealthBar").GetComponent<HealthBarScript>();
+            playerHealthBar = GameObject.Find("P3playerHealthBar").GetComponent<HealthBarScript>();
 
             FireImage = GameObject.Find("EnemyFire3");
             PoisonImage = GameObject.Find("EnemyPoison3");
@@ -88,7 +88,7 @@ public class playerManager : MonoBehaviour
             Action1 = GameObject.Find("P1Attack").GetComponent<Button>();
             Action2 = GameObject.Find("P1Action").GetComponent<Button>();
             Action3 = GameObject.Find("P1End").GetComponent<Button>();
-            playerHealthBar = GameObject.Find("P3playerHealthBar").GetComponent<HealthBarScript>();
+            playerHealthBar = GameObject.Find("P1playerHealthBar").GetComponent<HealthBarScript>();
 
             FireImage = GameObject.Find("EnemyFire1");
             PoisonImage = GameObject.Find("EnemyPoison1");

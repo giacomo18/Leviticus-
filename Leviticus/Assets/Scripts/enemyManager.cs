@@ -52,7 +52,7 @@ public class enemyManager : MonoBehaviour
         //Pref 3
         if (playerPreferences.hudTypePref == 3)
         {
-            enemyHealthBar = GameObject.Find("P1enemyHealthBar").GetComponent<HealthBarScript>();
+            enemyHealthBar = GameObject.Find("P3enemyHealthBar").GetComponent<HealthBarScript>();
 
             FireImage = GameObject.Find("PlayerFire3");
             PoisonImage = GameObject.Find("PlayerPoison3");
@@ -75,7 +75,7 @@ public class enemyManager : MonoBehaviour
         //Pref1
         else
         {
-            enemyHealthBar = GameObject.Find("P3enemyHealthBar").GetComponent<HealthBarScript>();
+            enemyHealthBar = GameObject.Find("P1enemyHealthBar").GetComponent<HealthBarScript>();
 
             FireImage = GameObject.Find("PlayerFire1");
             PoisonImage = GameObject.Find("PlayerPoison1");
