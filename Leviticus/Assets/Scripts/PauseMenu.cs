@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public playerManager playerManager;
+    public enemyManager enemyManager;
     public HUDManager HUDManager;
     public GameObject pauseMenu;
     public static bool isPaused;
@@ -69,6 +70,7 @@ public class PauseMenu : MonoBehaviour
         playerManager.Action2.interactable = true;
         playerManager.Action3.interactable = true;
         playerManager.UpdateUI();
+        enemyManager.UpdateEnemyUI();
         HUDManager.UpdateUI();
 
     }

@@ -102,6 +102,65 @@ public class enemyManager : MonoBehaviour
         HealNum.text = "";
         PowerNum.text = "";
     }
+
+    public void UpdateEnemyUI()
+    {
+        playerPreferences = GameObject.Find("PlayerData").GetComponent<PlayerPreferences>();
+        //Pref 3
+        if (playerPreferences.hudTypePref == 3)
+        {
+            enemyHealthBar = GameObject.Find("P3enemyHealthBar").GetComponent<HealthBarScript>();
+
+            FireImage = GameObject.Find("PlayerFire3");
+            PoisonImage = GameObject.Find("PlayerPoison3");
+            StunImage = GameObject.Find("PlayerStun3");
+            HealImage = GameObject.Find("PlayerHoT3");
+            PowerImage = GameObject.Find("PlayerPowerful3");
+
+        }
+        //Pref 2
+        else if (playerPreferences.hudTypePref == 2)
+        {
+            enemyHealthBar = GameObject.Find("P2enemyHealthBar").GetComponent<HealthBarScript>();
+
+            FireImage = GameObject.Find("PlayerFire2");
+            PoisonImage = GameObject.Find("PlayerPoison2");
+            StunImage = GameObject.Find("PlayerStun2");
+            HealImage = GameObject.Find("PlayerHoT2");
+            PowerImage = GameObject.Find("PlayerPowerful2");
+        }
+        //Pref1
+        else
+        {
+            enemyHealthBar = GameObject.Find("P1enemyHealthBar").GetComponent<HealthBarScript>();
+
+            FireImage = GameObject.Find("PlayerFire1");
+            PoisonImage = GameObject.Find("PlayerPoison1");
+            StunImage = GameObject.Find("PlayerStun1");
+            HealImage = GameObject.Find("PlayerHoT1");
+            PowerImage = GameObject.Find("PlayerPowerful1");
+        }
+
+        FireImage.GetComponent<Image>().enabled = false;
+        PoisonImage.GetComponent<Image>().enabled = false;
+        StunImage.GetComponent<Image>().enabled = false;
+        HealImage.GetComponent<Image>().enabled = false;
+        PowerImage.GetComponent<Image>().enabled = false;
+
+        FireNum = FireImage.GetComponentInChildren<TextMeshProUGUI>();
+        PoisonNum = PoisonImage.GetComponentInChildren<TextMeshProUGUI>();
+        StunNum = StunImage.GetComponentInChildren<TextMeshProUGUI>();
+        HealNum = HealImage.GetComponentInChildren<TextMeshProUGUI>();
+        PowerNum = PowerImage.GetComponentInChildren<TextMeshProUGUI>();
+
+        FireNum.text = "";
+        PoisonNum.text = "";
+        StunNum.text = "";
+        HealNum.text = "";
+        PowerNum.text = "";
+    }
+
+
     public void enemyTurn()
     {
         if(alive == true)
