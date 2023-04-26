@@ -62,7 +62,7 @@ public class playerManager : MonoBehaviour
             Action2 = GameObject.Find("P3Action").GetComponent<Button>();
             Action3 = GameObject.Find("P3End").GetComponent<Button>();
             playerHealthBar = GameObject.Find("P3playerHealthBar").GetComponent<HealthBarScript>();
-            
+            manaBar = GameObject.Find("mana3").GetComponent<HealthBarScript>();
 
             FireImage = GameObject.Find("EnemyFire3");
             PoisonImage = GameObject.Find("EnemyPoison3");
@@ -77,6 +77,7 @@ public class playerManager : MonoBehaviour
             Action2 = GameObject.Find("P2Action").GetComponent<Button>();
             Action3 = GameObject.Find("P2End").GetComponent<Button>();
             playerHealthBar = GameObject.Find("P2playerHealthBar").GetComponent<HealthBarScript>();
+            manaBar = GameObject.Find("mana2").GetComponent<HealthBarScript>();
 
             FireImage = GameObject.Find("EnemyFire2");
             PoisonImage = GameObject.Find("EnemyPoison2");
@@ -91,6 +92,7 @@ public class playerManager : MonoBehaviour
             Action2 = GameObject.Find("P1Action").GetComponent<Button>();
             Action3 = GameObject.Find("P1End").GetComponent<Button>();
             playerHealthBar = GameObject.Find("P1playerHealthBar").GetComponent<HealthBarScript>();
+            manaBar = GameObject.Find("mana1").GetComponent<HealthBarScript>();
 
             FireImage = GameObject.Find("EnemyFire1");
             PoisonImage = GameObject.Find("EnemyPoison1");
@@ -194,11 +196,12 @@ public class playerManager : MonoBehaviour
                 enemyManager.enemyHealth -= playerDamage;
             }
             enemyManager.enemyHealthBar.UpdateMeter(enemyManager.enemyHealth, enemyManager.enemyMaxHealth);
+            manaValue -= 1;
             manaBar.UpdateMeter(manaValue, manaMaxValue);
             anim.SetTrigger("attack");
 
         }
-       if(Button == 1 && manaValue > 1)
+       if(Button == 1 && manaValue > 2)
         {
           StatusEffect();
           manaValue -= 2;
