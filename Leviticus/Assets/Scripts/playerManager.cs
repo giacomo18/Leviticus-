@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class playerManager : MonoBehaviour
 {
     public HealthBarScript playerHealthBar;
+    public HealthBarScript manaBar;
     [SerializeField] enemyManager enemyManager;
     [SerializeField] GameManager gameManager;
     [SerializeField] PlayerPreferences playerPreferences;
@@ -61,6 +62,7 @@ public class playerManager : MonoBehaviour
             Action2 = GameObject.Find("P3Action").GetComponent<Button>();
             Action3 = GameObject.Find("P3End").GetComponent<Button>();
             playerHealthBar = GameObject.Find("P3playerHealthBar").GetComponent<HealthBarScript>();
+            
 
             FireImage = GameObject.Find("EnemyFire3");
             PoisonImage = GameObject.Find("EnemyPoison3");
@@ -121,6 +123,7 @@ public class playerManager : MonoBehaviour
     public void playerStart()
     {
         manaValue = manaMaxValue;
+        manaBar.UpdateMeter(manaValue, manaMaxValue);
 
         if (gameManager.playerStun == 0)
         {
@@ -180,7 +183,7 @@ public class playerManager : MonoBehaviour
 
     public void playerAction(int Button)
     {
-       if(Button == 0)
+       if(Button == 0 && manaValue > 0)
         {
             if (Power == true)
             {
@@ -191,17 +194,16 @@ public class playerManager : MonoBehaviour
                 enemyManager.enemyHealth -= playerDamage;
             }
             enemyManager.enemyHealthBar.UpdateMeter(enemyManager.enemyHealth, enemyManager.enemyMaxHealth);
-
+            manaBar.UpdateMeter(manaValue, manaMaxValue);
             anim.SetTrigger("attack");
 
         }
-       if(Button == 1)
+       if(Button == 1 && manaValue > 1)
         {
-            if(manaValue > 0)
-            {
-                StatusEffect();
-                manaValue -= 1;
-            }
+          StatusEffect();
+          manaValue -= 2;
+          manaBar.UpdateMeter(manaValue, manaMaxValue);
+
         }
        if(Button== 2)
         {

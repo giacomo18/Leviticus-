@@ -103,7 +103,7 @@ public class HoverController : MonoBehaviour
     public void PlayerHealthText()
     {
         hoverBox.SetActive(true);
-        rt.sizeDelta = new Vector2(800, 85);
+        rt.sizeDelta = new Vector2(250, 85);
         titleText.text = "<b>HP:</b>" + playerManager.playerHealthValue.ToString() + "/" + playerManager.playerMaxHealthValue.ToString();
     }
     public void EnemyHealthText()
